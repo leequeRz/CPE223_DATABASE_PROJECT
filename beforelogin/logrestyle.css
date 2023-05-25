@@ -18,7 +18,7 @@
 
 .row{
     width: 900px;
-    height: 550px;
+    height: 700px;
     border-radius: 10px;
     background: #fff;
     box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
@@ -72,7 +72,7 @@ i{
 .input-box header{
     font-weight: 700;
     text-align: center;
-    margin-bottom: 45px;
+    /* margin-bottom: 45px; */
 }
 
 .input-field{
@@ -184,4 +184,8 @@ img{
     text-decoration: underline;
     font-weight: 100;
     text-decoration-color: #917FB3;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
 }

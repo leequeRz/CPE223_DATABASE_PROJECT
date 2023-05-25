@@ -16,9 +16,12 @@
 				<div class="profile-tab-nav border-right">
 					<div class="p-4">
 						<div class="img-circle text-center mb-3">
-							<img src="img/user2.jpg" alt="Image" class="shadow">
+							<img src="/img/bannerhero.png" alt="" id="profile-pic">
+							<!-- <img src="img/user2.jpg" alt="Image" class="shadow"> -->
 						</div>
 						<h4 class="text-center">Bundit Than-iam</h4>
+						<label class="update-profile" for="input-file">Update</label>
+						<input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
 					</div>
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
@@ -182,6 +185,14 @@
 		</div>
 	</section>
 
+	<script>
+		let profilePic = document.getElementById("profile-pic");
+		let inputFile = document.getElementById("input-file");
+
+		inputFile.onchange = function(){
+			profilePic.src = URL.createObjectURL(inputFile.file[0]);
+		}
+	</script>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

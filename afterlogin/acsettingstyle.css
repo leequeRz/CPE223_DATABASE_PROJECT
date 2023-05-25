@@ -41,3 +41,20 @@ body {
 	border-radius: 100%;
 	border: 5px solid #fff;
 }
+
+.update-profile {
+	display: block;
+	width: 85px;
+	background: #3588e1;
+	color: #fff;
+	padding: 12px;
+	margin: 10px auto;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input{
+	display: none;
+}
+
+
