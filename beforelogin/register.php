@@ -74,7 +74,7 @@
                             <input type="submit" class="submit" Value="Sign Up">
                         </div>
                         <div class="signin">
-                            <span>Already have an account?<a href="login.html"> Log in here</a></span>
+                            <span>Already have an account?<a href="login.php"> Log in here</a></span>
                         </div>
                     </div>
                 </div>

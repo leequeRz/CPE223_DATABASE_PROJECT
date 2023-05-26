@@ -15,20 +15,20 @@
 
     <body>
         <section id="header">
-            <a href="index.html" class="headerlogo">ARHERELEE</a>
+            <a href="index.php" class="headerlogo">ARHERELEE</a>
             
             <div>
                 <ul id="navbar">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a class="active" href="shop.html">SHOP</a></li>
-                    <!-- <li><a href="blog.html">BLOG</a></li> -->
-                    <li><a href="login.html">LOGIN NOW</a></li>
-                    <li id="lg-bag"><a href="/cart.html"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a class="active" href="shop.php">SHOP</a></li>
+                    <!-- <li><a href="blog.php">BLOG</a></li> -->
+                    <li><a href="login.php">LOGIN NOW</a></li>
+                    <li id="lg-bag"><a href="/cart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
             <div id="mobile">
-                <a href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+                <a href="cart.php"><i class='bx bx-shopping-bag'></i></a>
                 <i id="bar" class="fas fa-outdent"></i>
                 
             </div>
@@ -75,7 +75,7 @@
             <h2>Featured Food</h2>
             <p>เมนู Recomment ของทางร้าน</p>
             <div class="pro-container">
-                <div class="pro" onclick="window.location.href='sproduct14.html';">
+                <div class="pro" onclick="window.location.href='sproduct14.php';">
                     <img src="/img/products/pepsi 550ml.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
@@ -89,9 +89,9 @@
                         </div>
                         <h4>20 บาท</h4>
                     </div>
-                    <a href="sproduct14.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct14.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct13.html';">
+                <div class="pro" onclick="window.location.href='sproduct13.php';">
                     <img src="/img/products/โกโก้เย็น.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
@@ -105,9 +105,9 @@
                         </div>
                         <h4>25 บาท</h4>
                     </div>
-                    <a href="sproduct13.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct13.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct12.html';">
+                <div class="pro" onclick="window.location.href='sproduct12.php';">
                     <img src="/img/products/โกโก้ปั่น.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
@@ -121,9 +121,9 @@
                         </div>
                         <h4>30 บาท</h4>
                     </div>
-                    <a href="sproduct12.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct12.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct15.html';">
+                <div class="pro" onclick="window.location.href='sproduct15.php';">
                     <img src="/img/products/sprite.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
@@ -137,7 +137,7 @@
                         </div>
                         <h4>20 บาท</h4>
                     </div>
-                    <a href="sproduct15.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct15.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
             </div>
         </section>

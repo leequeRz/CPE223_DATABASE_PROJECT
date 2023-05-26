@@ -10,25 +10,25 @@
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="/beforelogin/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <section id="header">
-            <a href="index.html" class="headerlogo">ARHERELEE</a>
+            <a href="index.php" class="headerlogo">ARHERELEE</a>
             
             <div>
                 <ul id="navbar">
-                    <li><a href="/beforelogin/index.html">HOME</a></li>
-                    <li><a href="/beforelogin/shop.html">SHOP</a></li>
-                    <!-- <li><a href="blog.html">BLOG</a></li> -->
-                    <li><a href="/beforelogin/login.html">LOGIN NOW</a></li>
-                    <li id="lg-bag"><a class="active" href="cart.html"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="shop.php">SHOP</a></li>
+                    <!-- <li><a href="blog.php">BLOG</a></li> -->
+                    <li><a href="login.php">LOGIN NOW</a></li>
+                    <li id="lg-bag"><a class="active" href="cart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
             <div id="mobile">
-                <a href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+                <a href="cart.php"><i class='bx bx-shopping-bag'></i></a>
                 <i id="bar" class="fas fa-outdent"></i>
                 
             </div>

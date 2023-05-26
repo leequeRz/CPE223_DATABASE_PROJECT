@@ -35,10 +35,10 @@
                             <input type="submit" class="submit" Value="Sign In">
                         </div>
                         <div class="signin">
-                            <span>Already haven't an account?<a href="register.html"> Register Here</a></span>
+                            <span>Already haven't an account?<a href="register.php"> Register Here</a></span>
                         </div>
                         <div class="back-tomain">
-                            <a href="index.html"><span>Back to Home Page</span></a>
+                            <a href="index.php"><span>Back to Home Page</span></a>
                         </div>
                     </div>
                 </div>

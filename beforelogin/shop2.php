@@ -15,20 +15,20 @@
 
     <body>
         <section id="header">
-            <a href="index.html" class="headerlogo">ARHERELEE</a>
+            <a href="index.php" class="headerlogo">ARHERELEE</a>
             
             <div>
                 <ul id="navbar">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a class="active" href="shop.html">SHOP</a></li>
-                    <!-- <li><a href="blog.html">BLOG</a></li> -->
-                    <li><a href="login.html">LOGIN NOW</a></li>
-                    <li id="lg-bag"><a href="/cart.html"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a class="active" href="shop.php">SHOP</a></li>
+                    <!-- <li><a href="blog.php">BLOG</a></li> -->
+                    <li><a href="login.php">LOGIN NOW</a></li>
+                    <li id="lg-bag"><a href="/cart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
             <div id="mobile">
-                <a href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+                <a href="cart.php"><i class='bx bx-shopping-bag'></i></a>
                 <i id="bar" class="fas fa-outdent"></i>
                 
             </div>
@@ -298,14 +298,14 @@
                         </div>
                         <h4>15 บาท</h4>
                     </div>
-                    <a href="sproduct16.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct16.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
             </div>
         </section>
 
         <section id="pagination" class="section-p1">
-            <a href="/beforelogin/shop.html">1</a>
-            <a href="/beforelogin/shop2.html">2</a>
+            <a href="/beforelogin/shop.php">1</a>
+            <a href="/beforelogin/shop2.php">2</a>
             <!-- <a href="#"><i class="fa-solid fa-arrow-right"></i></a> -->
         </section>
         

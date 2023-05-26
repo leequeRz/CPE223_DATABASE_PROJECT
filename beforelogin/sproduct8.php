@@ -15,20 +15,20 @@
 
     <body>
         <section id="header">
-            <a href="index.html" class="headerlogo">ARHERELEE</a>
+            <a href="index.php" class="headerlogo">ARHERELEE</a>
             
             <div>
                 <ul id="navbar">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a class="active" href="shop.html">SHOP</a></li>
-                    <!-- <li><a href="blog.html">BLOG</a></li> -->
-                    <li><a href="login.html">LOGIN NOW</a></li>
-                    <li id="lg-bag"><a href="/cart.html"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a class="active" href="shop.php">SHOP</a></li>
+                    <!-- <li><a href="blog.php">BLOG</a></li> -->
+                    <li><a href="login.php">LOGIN NOW</a></li>
+                    <li id="lg-bag"><a href="/cart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
             <div id="mobile">
-                <a href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+                <a href="cart.php"><i class='bx bx-shopping-bag'></i></a>
                 <i id="bar" class="fas fa-outdent"></i>
                 
             </div>
@@ -36,27 +36,27 @@
 
         <section id="prodetails" class="section-p1">
             <div class="single-pro-image">
-                <img src="/img/products/burger.jpg" width="100%" height="500px" id="MainImg" alt="">
+                <img src="/img/products/ผัดไทยทะเล.jpeg" width="100%" height="500px" id="MainImg" alt="">
                 <!-- <div class="small-img-group">
                     <div class="small-img-col">
-                        <img src="/img/products/burger.jpg" width="100%" class="small-img" alt="">
+                        <img src="/img/products/f1.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/burger.jpg" width="100%" class="small-img" alt="">
+                        <img src="/img/products/f2.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/burger.jpg" width="100%" class="small-img" alt="">
+                        <img src="/img/products/f3.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/burger.jpg" width="100%" class="small-img" alt="">
+                        <img src="/img/products/f4.jpg" width="100%" class="small-img" alt="">
                     </div>
                 </div> -->
             </div>
 
             <div class="single-pro-details">
-                <h7>Fast Food</h7>
-                <h4>Burger คำโตๆ</h4>
-                <h2>79 บาท</h2>
+                <h7>Thai Food</h7>
+                <h4>ผัดไททะเล</h4>
+                <h2>70 บาท</h2>
                 <!-- <select>
                     <option>select size</option>
                     <option>XL</option>
@@ -67,7 +67,7 @@
                 <input type="number" value="1">
                 <button class="normal">ADD TO CART</button>
                 <h4>Product detail</h4>
-                <span>เบอร์เกอร์แสนอร่อยที่เป็นสูตรพิเศษจากทางร้าน</span>
+                <span>ผัดไทสูตรเด็ด เจ็ดย่านน้ำ</span>
             </div>
         </section>
 
@@ -75,11 +75,11 @@
             <h2>Featured Food</h2>
             <p>เมนู Recomment ของทางร้าน</p>
             <div class="pro-container">
-                <div class="pro" onclick="window.location.href='sproduct9.html';">
-                    <img src="/img/products/ส้มตำไทย.jpg" alt="">
+                <div class="pro">
+                    <img src="/img/products/ต้มยำกุ้ง.jpg" alt="" onclick="window.location.href='sproduct6.php';">
                     <div class="des">
                         <span>Thai Food</span>
-                        <h5>ส้มตำไทย</h5>
+                        <h5>ต้มยำกุ้ง</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -87,31 +87,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>50 บาท</h4>
+                        <h4>80 บาท</h4>
                     </div>
-                    <a href="sproduct9.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct6.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct10.html';">
-                    <img src="/img/products/เป็ดปักกิ่งง.jpg" alt="">
-                    <div class="des">
-                        <span>Chinese Food</span>
-                        <h5>เป็ดปักกิ่งแสนอร่อย</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>109 บาท</h4>
-                    </div>
-                    <a href="sproduct10.html"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro" onclick="window.location.href='sproduct2.html';">
-                    <img src="/img/products/กะเพราหมูกรอบ.jpg" alt="">
+                <div class="pro" onclick="window.location.href='sproduct11.php';">
+                    <img src="/img/products/แกงส้มกุ้ง.jpeg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
-                        <h5>กะเพราหมูกรอบ</h5>
+                        <h5>แกงส้มกุ้ง</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -121,9 +105,9 @@
                         </div>
                         <h4>70 บาท</h4>
                     </div>
-                    <a href="sproduct2.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct11.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct4.html';">
+                <div class="pro" onclick="window.location.href='sproduct4.php';">
                     <img src="/img/products/ข้าวผัดปู.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
@@ -137,7 +121,23 @@
                         </div>
                         <h4>80 บาท</h4>
                     </div>
-                    <a href="sproduct4.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct4.php"><i class='bx bx-cart cartbuy'></i></a>
+                </div>
+                <div class="pro" onclick="window.location.href='sproduct9.php';">
+                    <img src="/img/products/ส้มตำไทย.jpg" alt="">
+                    <div class="des">
+                        <span>Thai Food</span>
+                        <h5>ส้มตำไทย</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>50 บาท</h4>
+                    </div>
+                    <a href="sproduct9.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
             </div>
         </section>
