@@ -15,11 +15,11 @@
 
     <body>
         <section id="header">
-            <a href="index.php" class="headerlogo">ARHERELEE</a>
+            <a href="home.php" class="headerlogo">ARHERELEE</a>
             
             <div>
                 <ul id="navbar">
-                    <li><a href="/database_project/beforelogin/index.php">HOME</a></li>
+                    <li><a href="/database_project/beforelogin/home.php">HOME</a></li>
                     <li><a href="/database_project/beforelogin/shop.php">SHOP</a></li>
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
                     <li><a href="/database_project/beforelogin/login.php">LOGIN NOW</a></li>
@@ -57,7 +57,7 @@
                 <tbody>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="img/products/burger.jpg" alt=""></td>
+                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>
@@ -65,7 +65,7 @@
                     </tr>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="img/products/burger.jpg" alt=""></td>
+                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>
@@ -73,7 +73,7 @@
                     </tr>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="img/products/burger.jpg" alt=""></td>
+                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>

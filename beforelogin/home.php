@@ -31,11 +31,11 @@
         </div>
         <?php  } ?>
             <section id="header">
-                <a href="index.php" class="headerlogo">ARHERELEE</a>
+                <a href="home.php" class="headerlogo">ARHERELEE</a>
         
                 <div>
                     <ul id="navbar">
-                        <li><a class="active" href="index.php">HOME</a></li>
+                        <li><a class="active" href="home.php">HOME</a></li>
                         <li><a href="shop.php">SHOP</a></li>
                         <!-- <li><a href="blog.php">BLOG</a></li> -->
                         <li><a href="login.php">LOGIN NOW</a></li>

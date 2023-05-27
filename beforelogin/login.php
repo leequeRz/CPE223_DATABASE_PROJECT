@@ -60,7 +60,7 @@
                             <span>Already haven't an account?<a href="register.php"> Register Here</a></span>
                         </div>
                         <div class="back-tomain">
-                            <a href="index.php"><span>Back to Home Page</span></a>
+                            <a href="home.php"><span>Back to Home Page</span></a>
                         </div>
                     </div>
                 </div>
