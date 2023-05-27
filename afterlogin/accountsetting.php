@@ -153,6 +153,24 @@
 								  	<input type="text" class="form-control">
 								</div>
 							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>City</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Province</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Postal Code</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
 						</div>
 						<div>
 							<button class="btn btn-primary">Update</button>

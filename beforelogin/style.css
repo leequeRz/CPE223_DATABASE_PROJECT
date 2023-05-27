@@ -911,3 +911,26 @@ left: 20px;
 .section-p3{
   padding: 40px 80px 0 40px;
 }
+
+#coupon .halfpayhalforeder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px ;
+}
+
+.halfpayhalforeder .payment-method{
+  width: 50%;
+}
+
+.halfpayhalforeder .order-type{
+  width: 50%;
+}
+
+#coupon select{
+  width: 135px;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
