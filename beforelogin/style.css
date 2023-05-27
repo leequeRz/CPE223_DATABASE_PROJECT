@@ -186,18 +186,25 @@ left: 20px;
   justify-content: center;
 }
 
+/* #hero-banner{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 .boxtext-feature{
   width: 30%;
   min-width: 250px;
   padding: 10px 12px;
   border: 1px solid #2A2F4F;
   border-radius: 15px;
-  justify-content: center;
+  /* justify-content: center;
   text-align: center;
   align-items: center;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 .boxtext-feature .textfeature{
@@ -761,6 +768,10 @@ left: 20px;
 }
 
 .slider .slide{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -785,8 +796,8 @@ left: 20px;
   color: #222;
   width: 45%;
   height: 200px;
-  margin-top: 370px;
-  margin-left: 600px;
+  /* margin-top: 370px;
+  margin-left: 600px; */
   padding: 20px;
   border-radius: 5px;
   background: #fffafa;
