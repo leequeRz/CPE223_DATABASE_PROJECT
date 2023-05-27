@@ -36,6 +36,10 @@
 							<i class="fa fa-user text-center mr-1"></i> 
 							Address
 						</a>
+						<a class="nav-link" id="card-tab" data-toggle="pill" href="#card" role="tab" aria-controls="card" aria-selected="false">
+							<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+							Card
+						</a>
 						<!-- <a class="nav-link" id="promotion-tab" data-toggle="pill" href="#promotion" role="tab" aria-controls="promotion" aria-selected="false">
 							<i class="fa fa-tv text-center mr-1"></i> 
 							Promotion
@@ -93,12 +97,12 @@
 								  	<input type="date" class="form-control" value="">
 								</div>
 							</div>
-							<div class="col-md-12">
+							<!-- <div class="col-md-12">
 								<div class="form-group">
 								  	<label>Bio</label>
 									<textarea class="form-control" rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore vero enim error similique quia numquam ullam corporis officia odio repellendus aperiam consequatur laudantium porro voluptatibus, itaque laboriosam veritatis voluptatum distinctio!</textarea>
 								</div>
-							</div>
+							</div> -->
 						</div>
 						<div>
 							<button class="btn btn-primary">Update</button>
@@ -147,6 +151,63 @@
 								<div class="form-group">
 								  	<label>Address2</label>
 								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>City</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Province</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Postal Code</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div>
+							<button class="btn btn-primary">Update</button>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="card" role="tabpanel" aria-labelledby="card-tab">
+						<h3 class="mb-4">Card info</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Card Number</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>cvv</label>
+								  	<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>EXP</label>
+								  	<input type="month" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Card type</label>
+								  	<form>
+										<label for="cardtype">Type:</label>
+										<select id="cardtype" name="cardtype">
+											<option value="CREDIT">CREDIT</option>
+											<option value="DEBIT">DEBIT</option>
+										</select>
+									</form>
 								</div>
 							</div>
 						</div>

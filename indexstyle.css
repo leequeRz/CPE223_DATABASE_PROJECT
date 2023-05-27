@@ -10,16 +10,16 @@ body {
 }
 
 #pictureindex{
-    background-image: url(/database_project/img/lee1.jpg);
+    background-image: url(/database_project/img/arherelee1st.png);
     width: 100%;
-    height: 600px;
+    height: 1000px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: -10px;
 }
 
 #loveAj a{

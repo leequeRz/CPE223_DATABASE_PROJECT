@@ -32,9 +32,9 @@ $row = mysqli_fetch_array($result);
             
         <div>
             <ul id="navbar-after">
-                <li><a class="active" href="afterlogin.php">HOME</a></li>
+                <li><a href="afterlogin.php">HOME</a></li>
                 <li><a href="afshop.php">SHOP</a></li>
-                <li><a href="table.php">TABLE</a></li>
+                <li><a class="active" href="table.php">TABLE</a></li>
                 <!-- <li><a href="blog.php">BLOG</a></li> -->
                 <li><a href="/beforelogin/index.php">LOGOUT</a></li>
                 <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
@@ -54,13 +54,13 @@ $row = mysqli_fetch_array($result);
             <div class="col-sm-2 col-md-2"></div>
             <div class="col-12 col-sm-11 col-md-7" style="margin-top: 50px;">
                 <br>
-                <h4 align="center" style="color: red;">บันทึกข้อมูล</h4>
+                <h2 align="center" style="color: red;">บันทึกข้อมูล</h2>
                 <br>
                 <div class="row">
                     <div class="col-sm-12 col-md-12">
                         <div class="alert alert-warning" role="alert">
                             <center>
-                                <font color="red"> <b> บันทึกการเลือกโต๊ะ *ให้พนักงานเลือกให้ เลือกและจองวันต่อวัน </b>
+                                <font color="red"> <p class="h4"> บันทึกการเลือกโต๊ะ *ลูกค้าสามารถกดจองโต๊ะตามขนาดที่เลือกไว้ได้เลย* </p>
                                 </font>
                             </center>
                         </div>
@@ -75,13 +75,20 @@ $row = mysqli_fetch_array($result);
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-sm-2 ">ขนาดโต๊ะ</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" name="sizetable" class="form-control" disabled
+                                            value="<?php echo $row['sizetable']; ?>">
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group row">
                                     <label class="col-sm-2 ">ผู้จอง</label>
                                     <div class="col-sm-7">
                                         <input type="text" name="booking_name" class="form-control" required
                                             placeholder="ชื่อผู้จอง" minlength="5">
                                     </div>
-                                </div>
-                                <div class="form-group row">
+                                </div> -->
+                                <!-- <div class="form-group row">
                                     <label class="col-sm-2 ">วันที่</label>
                                     <div class="col-sm-5">
                                         <input type="date" name="booking_date" class="form-control" required
@@ -93,19 +100,19 @@ $row = mysqli_fetch_array($result);
                                         <input type="time" name="booking_time" class="form-control" required
                                             placeholder="เวลา">
                                     </div>
-                                </div>
-                                <div class="form-group row">
+                                </div> -->
+                                <!-- <div class="form-group row">
                                     <label class="col-sm-2 ">เบอร์โทร</label>
                                     <div class="col-sm-7">
                                         <input type="text" name="booking_phone" class="form-control" required
                                             placeholder="เบอร์โทร" minlength="10" maxlength="10">
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
-                                    <label class="col-sm-2 ">ผู้บันทึก</label>
+                                    <label class="col-sm-2 ">จำนวนที่นั่ง</label>
                                     <div class="col-sm-3">
-                                        <input type="text" name="booking_staff" class="form-control" readonly
-                                            value="พนง.">
+                                        <input type="text" name="booking_staff" class="form-control" disabled
+                                            value="<?php echo $row['sizevalue']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">

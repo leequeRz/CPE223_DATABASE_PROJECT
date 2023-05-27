@@ -58,7 +58,7 @@
                         </div>
                         <h4>80 บาท</h4>
                     </div>
-                    <a href="sproduct.php"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct17.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct18.php';">
                     <img src="/database_project/img/products/ทอดมันกุ้ง.jpg" alt="">
@@ -74,29 +74,13 @@
                         </div>
                         <h4>70 บาท</h4>
                     </div>
-                    <a href="#"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct18.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct3.php';">
-                    <img src="/img/products/ขนมจีบกุ้ง.jpg" alt="">
-                    <div class="des">
-                        <span>Chinese Food</span>
-                        <h5>ขนมจีบกุ้ง</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>25 บาท</h4>
-                    </div>
-                    <a href="#"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro"onclick="window.location.href='sproduct4.php';">
-                    <img src="/img/products/ข้าวผัดปู.jpg" alt="">
+                <div class="pro" onclick="window.location.href='sproduct19.php';">
+                    <img src="/database_project/img/products/ปีกไก่ทอด.jpeg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
-                        <h5>ข้าวผัดปู</h5>
+                        <h5>ปีกไก่ทอด</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -104,15 +88,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>80 บาท</h4>
+                        <h4>70 บาท</h4>
                     </div>
-                    <a href="#"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct19.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct5.php';">
-                    <img src="/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
+                <div class="pro"onclick="window.location.href='sproduct20.php';">
+                    <img src="/database_project/img/products/ผัดผักรวมมิตรกุ้ง.jpg" alt="">
                     <div class="des">
-                        <span>Chinese Food</span>
-                        <h5>ซาลาเปาหมูสับไข่เค็ม</h5>
+                        <span>Thai Food</span>
+                        <h5>ผัดผักรวมมิตรกุ้ง</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -120,7 +104,23 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>30 บาท</h4>
+                        <h4>50 บาท</h4>
+                    </div>
+                    <a href="sproduct20.php"><i class='bx bx-cart cartbuy'></i></a>
+                </div>
+                <div class="pro" onclick="window.location.href='sproduct21.php';">
+                    <img src="/database_project/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
+                    <div class="des">
+                        <span>Thai Food</span>
+                        <h5>ต้มข่าไก่</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>50 บาท</h4>
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
@@ -176,7 +176,7 @@
         </section>
 
         <section id="pagination" class="section-p1">
-            <a href="/beforelogin/shop.php">1</a>
+            <a href="/database_project/beforelogin/shop.php">1</a>
             <a href="/beforelogin/shop2.php">2</a>
             <!-- <a href="#"><i class="fa-solid fa-arrow-right"></i></a> -->
         </section>

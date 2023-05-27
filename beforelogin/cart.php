@@ -90,6 +90,32 @@
                     <input type="text" placeholder="Enter Your Coupon">
                     <button class="normal">Apply</button>
                 </div>
+                <div class="halfpayhalforeder">
+                    <div class="payment-method">
+                        <h3>Payment Method</h3>
+                        <div class="form-group">
+					        <form>
+						        <label for="paymethod">Type:</label>
+						        <select id="paymethod" name="paymethod">
+							        <option value="CREDIT">CARD</option>
+							        <option value="DEBIT">CASH</option>
+						        </select>
+					        </form>
+				        </div>
+                    </div>
+                    <div class="order-type">
+                        <h3>Order Type</h3>
+                        <div class="form-group">
+					        <form>
+						        <label for="ordertype">Type:</label>
+						        <select id="ordertype" name="ordertype">
+							        <option value="ONLINE">ONLINE</option>
+							        <option value="ONSITE">ONSITE</option>
+						        </select>
+					        </form>
+				        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="subtotal">
