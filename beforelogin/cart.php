@@ -19,10 +19,10 @@
             
             <div>
                 <ul id="navbar">
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="shop.php">SHOP</a></li>
+                    <li><a href="/project_database/beforelogin/index.php">HOME</a></li>
+                    <li><a href="/project_database/beforelogin/shop.php">SHOP</a></li>
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
-                    <li><a href="login.php">LOGIN NOW</a></li>
+                    <li><a href="/project_database/beforelogin/login.php">LOGIN NOW</a></li>
                     <li id="lg-bag"><a class="active" href="cart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
@@ -34,11 +34,11 @@
             </div>
         </section>
 
-        <section id="page-header">
+        <section id="page-cart">
             
-            <h2>AR-HERE-LEE</h2>
+            <!-- <h2>AR-HERE-LEE</h2>
             
-            <p>เอนจอยค้าบโผม</p>
+            <p>เอนจอยค้าบโผม</p> -->
             
         </section>
 <!--Cart Item Detail-->
@@ -53,15 +53,33 @@
                         <td>Quantity</td>
                         <td>Subtotal</td>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="/img/products/burger.jpg" alt=""></td>
+                        <td><img src="img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>
                         <td>79 บาท</td>
                     </tr>
-                </thead>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="img/products/burger.jpg" alt=""></td>
+                        <td>Burger</td>
+                        <td>79 บาท</td>
+                        <td><input type="number" value="1"></td>
+                        <td>79 บาท</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="img/products/burger.jpg" alt=""></td>
+                        <td>Burger</td>
+                        <td>79 บาท</td>
+                        <td><input type="number" value="1"></td>
+                        <td>79 บาท</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
         

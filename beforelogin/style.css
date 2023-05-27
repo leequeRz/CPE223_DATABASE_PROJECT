@@ -63,6 +63,11 @@ body {
   width: 100%;
 }
 
+/* .bgcontent {
+  background-image: url("/img/bg.jpg");
+  background-size: cover;
+} */
+
 /* Header Start */
 #header{
     display: flex;
@@ -75,13 +80,14 @@ body {
     position: sticky;
     top: 0;
     left: 0;
+    height: 80px;
 }
 
 .headerlogo{
     text-decoration: none;
     color: white;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 #navbar{
@@ -98,7 +104,7 @@ body {
 
 #navbar li a{
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: white;
   transition: 0.3s ease;
@@ -134,7 +140,7 @@ body {
 
 #navbar-after li a{
 text-decoration: none;
-font-size: 16px;
+font-size: 20px;
 font-weight: 600;
 color: white;
 transition: 0.3s ease;
@@ -180,6 +186,43 @@ left: 20px;
   justify-content: center;
 }
 
+.boxtext-feature{
+  width: 30%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #2A2F4F;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxtext-feature .textfeature{
+  text-align: center;
+}
+
+.boxtext-product{
+  width: 40%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #2A2F4F;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.boxtext-product .textproduct{
+  text-align: center;
+}
+
+
 #hero h4{
   padding-bottom: 15px;
 }
@@ -208,7 +251,7 @@ left: 20px;
 }
 
 #feature .fe-box{
-  width: 180px;
+  width: 250px;
   text-align: center;
   padding: 25px 15px;
   box-shadow: 20px 20px 34px rgb(0, 0, 0, 0.03);
@@ -287,7 +330,6 @@ left: 20px;
   width: 100%;
   height: 300px;
   border-radius: 20px;
-  object-fit: cover;
 }
 
 #product1 .pro .des{
@@ -458,17 +500,47 @@ left: 20px;
 
 /* Shop Page */
 
-#page-header{
-  background-image: url("/img/banner/bannerarherelee.png");
+#page-header {
+  background-image: url("/project_database/img/banner/banner4.png");
   width: 100%;
   height: 40vh;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   text-align: center;
   flex-direction: column;
   padding: 14px;
 }
+
+#page-cart{
+    background-image: url("/project_database/img/banner/banner5.png");
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  #page-table{
+    background-image: url("/project_database/img/banner/banner6.png");
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+  }
 
 #page-header h2,
 #page-header p{
@@ -673,15 +745,17 @@ left: 20px;
 
 #feature-head{
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider{
   position: relative;
   background: #000116;
-  height: 85vh;
-  width: 1500px;
+  height: 92vh;
+  width: 100%;
   min-height: 500px;
-  margin: 20px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -703,19 +777,21 @@ left: 20px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* filter: blur(1.5px); */
 }
 
 .slider .slide .info{
   position: absolute;
   color: #222;
-  background: rgba(255, 255, 255, 0.3);
-  width: 50%;
+  width: 45%;
   height: 200px;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 370px;
+  margin-left: 600px;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+  background: #fffafa;
+  box-shadow:  -5px 0px 5px #fcf8f8,
+               5px 0px 5px #fffdfd;
 }
 
 .slider .slide .info .info2{
@@ -741,7 +817,7 @@ left: 20px;
 }
 
 .navigation{
-  height: 675px;
+  height: 1000px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -815,4 +891,12 @@ left: 20px;
   .slider .slide .info p{
     font-size: 0.9em;
   }
+}
+
+#title h2{
+  text-align: center;
+}
+
+.section-p3{
+  padding: 40px 80px 0 40px;
 }

@@ -10,20 +10,22 @@
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/project_database/beforelogin/style.css">
     </head>
 
     <body>
         <section id="header">
-            <a href="index.php" class="headerlogo">ARHERELEE</a>
+            <a href="afterlogin.php" class="headerlogo">ARHERELEE</a>
             
             <div>
-                <ul id="navbar">
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a class="active" href="shop.php">SHOP</a></li>
+                <ul id="navbar-after">
+                    <li><a href="afterlogin.php">HOME</a></li>
+                    <li><a class="active" href="afshop.php">SHOP</a></li>
+                    <li><a href="table.php">TABLE</a></li>
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
-                    <li><a href="login.php">LOGIN NOW</a></li>
-                    <li id="lg-bag"><a href="/cart.php"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li><a href="/beforelogin/index.php">LOGOUT</a></li>
+                    <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
+                    <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
@@ -36,27 +38,27 @@
 
         <section id="prodetails" class="section-p1">
             <div class="single-pro-image">
-                <img src="/project_database/img/products/burger.jpg" width="100%" height="500px" id="MainImg" alt="">
+                <img src="/project_database/img/products/sprite.jpg" width="100%" height="500px" id="MainImg" alt="">
                 <!-- <div class="small-img-group">
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/burger.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f1.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/burger.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f2.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/burger.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f3.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/burger.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f4.jpg" width="100%" class="small-img" alt="">
                     </div>
                 </div> -->
             </div>
 
             <div class="single-pro-details">
-                <h7>Fast Food</h7>
-                <h4>Burger คำโตๆ</h4>
-                <h2>79 บาท</h2>
+                <h7>Drink</h7>
+                <h4>สไปร์ท</h4>
+                <h2>20 บาท</h2>
                 <!-- <select>
                     <option>select size</option>
                     <option>XL</option>
@@ -67,7 +69,7 @@
                 <input type="number" value="1">
                 <button class="normal">ADD TO CART</button>
                 <h4>Product detail</h4>
-                <span>เบอร์เกอร์แสนอร่อยที่เป็นสูตรพิเศษจากทางร้าน</span>
+                <span>สไปร์ทหวานตัดขา</span>
             </div>
         </section>
 
@@ -75,11 +77,11 @@
             <h2>Featured Food</h2>
             <p>เมนู Recomment ของทางร้าน</p>
             <div class="pro-container">
-                <div class="pro" onclick="window.location.href='sproduct9.php';">
-                    <img src="/project_database/img/products/ส้มตำไทย.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct14.php';">
+                    <img src="/project_database/img/products/pepsi 550ml.jpg" alt="">
                     <div class="des">
-                        <span>Thai Food</span>
-                        <h5>ส้มตำไทย</h5>
+                        <span>Drink</span>
+                        <h5>เป๊ปซี่</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -87,15 +89,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>50 บาท</h4>
+                        <h4>20 บาท</h4>
                     </div>
-                    <a href="sproduct9.php"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="afsproduct14.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct10.php';">
-                    <img src="/project_database/img/products/เป็ดปักกิ่งง.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct13.php';">
+                    <img src="/project_database/img/products/โกโก้เย็น.jpg" alt="">
                     <div class="des">
-                        <span>Chinese Food</span>
-                        <h5>เป็ดปักกิ่งแสนอร่อย</h5>
+                        <span>Drink</span>
+                        <h5>โกโก้เย็น</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -103,15 +105,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>109 บาท</h4>
+                        <h4>25 บาท</h4>
                     </div>
-                    <a href="sproduct10.php"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="afsproduct13.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct2.php';">
-                    <img src="/project_database/img/products/กะเพราหมูกรอบ.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct13.php';">
+                    <img src="/project_database/img/products/โกโก้ปั่น.jpg" alt="">
                     <div class="des">
-                        <span>Thai Food</span>
-                        <h5>กะเพราหมูกรอบ</h5>
+                        <span>Drink</span>
+                        <h5>โกโก้ปั่น</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -119,15 +121,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>70 บาท</h4>
+                        <h4>30 บาท</h4>
                     </div>
-                    <a href="sproduct2.php"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="afsproduct12.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='sproduct4.php';">
-                    <img src="/project_database/img/products/ข้าวผัดปู.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct16.php';">
+                    <img src="/project_database/img/products/น้ำแร่.jpg" alt="">
                     <div class="des">
-                        <span>Thai Food</span>
-                        <h5>ข้าวผัดปู</h5>
+                        <span>Drink</span>
+                        <h5>น้ำแร่</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -135,9 +137,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>80 บาท</h4>
+                        <h4>15 บาท</h4>
                     </div>
-                    <a href="sproduct4.php"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="afsproduct16.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
             </div>
         </section>
@@ -160,7 +162,7 @@
             }
         </script>
         
-        <script src="script.js"></script>
+        <script src="/beforelogin/script.js"></script>
         <script src="https://kit.fontawesome.com/10876e5229.js" crossorigin="anonymous"></script>
     </body>
 

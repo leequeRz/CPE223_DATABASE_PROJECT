@@ -10,7 +10,7 @@
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="/beforelogin/style.css">
+        <link rel="stylesheet" href="/project_database/beforelogin/style.css">
     </head>
 
     <body>
@@ -19,17 +19,18 @@
             
             <div>
                 <ul id="navbar-after">
-                    <li><a href="afterlogin.html">HOME</a></li>
-                    <li><a class="active" href="afshop.html">SHOP</a></li>
-                    <!-- <li><a href="blog.html">BLOG</a></li> -->
-                    <li><a href="/beforelogin/index.html">LOGOUT</a></li>
-                    <li><a href="accountsetting.html">ACCOUNT SETTING</a></li>
-                    <li id="lg-bag"><a href="/cart.html"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li><a href="afterlogin.php">HOME</a></li>
+                    <li><a class="active" href="afshop.php">SHOP</a></li>
+                    <li><a href="table.php">TABLE</a></li>
+                    <!-- <li><a href="blog.php">BLOG</a></li> -->
+                    <li><a href="/beforelogin/index.php">LOGOUT</a></li>
+                    <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
+                    <li id="lg-bag"><a href="/afterlogin/afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
             <div id="mobile">
-                <a href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+                <a href="cart.php"><i class='bx bx-shopping-bag'></i></a>
                 <i id="bar" class="fas fa-outdent"></i>
                 
             </div>
@@ -37,16 +38,17 @@
 
         <section id="page-header">
             
-            <h2>AR-HERE-LEE</h2>
+            <!-- <h2>AR-HERE-LEE</h2>
             
-            <p>เอนจอยค้าบโผม</p>
+            <p>เอนจอยค้าบโผม</p> -->
             
         </section>
 
         <section id="product1" class="section-p1">
+            <h2>MENU ARHERELEE</h2>
             <div class="pro-container">
-                <div class="pro" onclick="window.location.href='afsproduct.html';">
-                    <img src="/img/products/burger.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct.php';">
+                    <img src="/project_database/img/products/burger.jpg" alt="">
                     <div class="des">
                         <span>Fast food</span>
                         <h5>Burger คำโตๆ</h5>
@@ -59,10 +61,10 @@
                         </div>
                         <h4>79 บาท</h4>
                     </div>
-                    <a href="afsproduct.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="afsproduct.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct2.html';">
-                    <img src="/img/products/กะเพราหมูกรอบ.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct2.php';">
+                    <img src="/project_database/img/products/กะเพราหมูกรอบ.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>กระเพราะหมูกรอบ</h5>
@@ -75,10 +77,10 @@
                         </div>
                         <h4>70 บาท</h4>
                     </div>
-                    <a href="afsproduct2.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="afsproduct2.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct3.html';">
-                    <img src="/img/products/ขนมจีบกุ้ง.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct3.php';">
+                    <img src="/project_database/img/products/ขนมจีบกุ้ง.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>ขนมจีบกุ้ง</h5>
@@ -93,8 +95,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro"onclick="window.location.href='afsproduct4.html';">
-                    <img src="/img/products/ข้าวผัดปู.jpg" alt="">
+                <div class="pro"onclick="window.location.href='afsproduct4.php';">
+                    <img src="/project_database/img/products/ข้าวผัดปู.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ข้าวผัดปู</h5>
@@ -109,8 +111,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct5.html';">
-                    <img src="/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct5.php';">
+                    <img src="/project_database/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>ซาลาเปาหมูสับไข่เค็ม</h5>
@@ -125,8 +127,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct6.html';">
-                    <img src="/img/products/ต้มยำกุ้ง.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct6.php';">
+                    <img src="/project_database/img/products/ต้มยำกุ้ง.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ต้มยำกุ้ง</h5>
@@ -141,8 +143,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct7.html';">
-                    <img src="/img/products/บัวลอยไข่หวาน.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct7.php';">
+                    <img src="/project_database/img/products/บัวลอยไข่หวาน.jpg" alt="">
                     <div class="des">
                         <span>Dessert</span>
                         <h5>บัวลอยไข่หวาน</h5>
@@ -157,8 +159,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct8.html';">
-                    <img src="/img/products/ผัดไทยทะเล.jpeg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct8.php';">
+                    <img src="/project_database/img/products/ผัดไทยทะเล.jpeg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ผัดไททะเล</h5>
@@ -173,8 +175,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct9.html';">
-                    <img src="/img/products/ส้มตำไทย.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct9.php';">
+                    <img src="/project_database/img/products/ส้มตำไทย.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ส้มตำไทย</h5>
@@ -189,8 +191,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct10.html';">
-                    <img src="/img/products/เป็ดปักกิ่งง.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct10.php';">
+                    <img src="/project_database/img/products/เป็ดปักกิ่งง.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>เป็ดปักกิ่ง</h5>
@@ -205,8 +207,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct11.html';">
-                    <img src="/img/products/แกงส้มกุ้ง.jpeg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct11.php';">
+                    <img src="/project_database/img/products/แกงส้มกุ้ง.jpeg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>แกงส้มกุ้ง</h5>
@@ -221,8 +223,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct12.html';">
-                    <img src="/img/products/โกโก้ปั่น.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct12.php';">
+                    <img src="/project_database/img/products/โกโก้ปั่น.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>โกโก้ปั่น</h5>
@@ -237,8 +239,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct13.html';">
-                    <img src="/img/products/โกโก้เย็น.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct13.php';">
+                    <img src="/project_database/img/products/โกโก้เย็น.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>โกโก้เย็น</h5>
@@ -253,8 +255,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct14.html';">
-                    <img src="/img/products/pepsi 550ml.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct14.php';">
+                    <img src="/project_database/img/products/pepsi 550ml.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>เป๊ปซี่</h5>
@@ -269,8 +271,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct15.html';">
-                    <img src="/img/products/sprite.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct15.php';">
+                    <img src="/project_database/img/products/sprite.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>สไปร์ท</h5>
@@ -285,8 +287,8 @@
                     </div>
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-                <div class="pro" onclick="window.location.href='afsproduct16.html';">
-                    <img src="/img/products/น้ำแร่.jpg" alt="">
+                <div class="pro" onclick="window.location.href='afsproduct16.php';">
+                    <img src="/project_database/img/products/น้ำแร่.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>น้ำแร่</h5>
@@ -299,15 +301,15 @@
                         </div>
                         <h4>15 บาท</h4>
                     </div>
-                    <a href="sproduct16.html"><i class='bx bx-cart cartbuy'></i></a>
+                    <a href="sproduct16.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
             </div>
         </section>
 
         <section id="pagination" class="section-p1">
-            <a href="/afterlogin/afshop.html">1</a>
-            <a href="/afterlogin/afshop2.html">2</a>
-            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+            <a href="/project_database/afterlogin/afshop.php">1</a>
+            <a href="/project_database/afterlogin/afshop2.php">2</a>
+            <a href="/project_database/afterlogin/afshop2.php"><i class="fa-solid fa-arrow-right"></i></a>
         </section>
         
         <script src="/beforelogin/script.js"></script>

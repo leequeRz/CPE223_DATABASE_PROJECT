@@ -36,19 +36,19 @@
 
         <section id="prodetails" class="section-p1">
             <div class="single-pro-image">
-                <img src="/img/products/แกงส้มกุ้ง.jpeg" width="100%" height="500px" id="MainImg" alt="">
+                <img src="/project_database/img/products/แกงส้มกุ้ง.jpeg" width="100%" height="500px" id="MainImg" alt="">
                 <!-- <div class="small-img-group">
                     <div class="small-img-col">
-                        <img src="/img/products/f1.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f1.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/f2.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f2.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/f3.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f3.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/f4.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f4.jpg" width="100%" class="small-img" alt="">
                     </div>
                 </div> -->
             </div>
@@ -76,7 +76,7 @@
             <p>เมนู Recomment ของทางร้าน</p>
             <div class="pro-container">
                 <div class="pro">
-                    <img src="/img/products/เป็ดปักกิ่งง.jpg" alt="" onclick="window.location.href='sproduct10.php';">
+                    <img src="/project_database/img/products/เป็ดปักกิ่งง.jpg" alt="" onclick="window.location.href='sproduct10.php';">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>เป็ดปักกิ่ง</h5>
@@ -92,7 +92,7 @@
                     <a href="sproduct10.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct2.php';">
-                    <img src="/img/products/กะเพราหมูกรอบ.jpg" alt="">
+                    <img src="/project_database/img/products/กะเพราหมูกรอบ.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>กระเพราะหมูกรอบ</h5>
@@ -108,7 +108,7 @@
                     <a href="sproduct2.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct4.php';">
-                    <img src="/img/products/ข้าวผัดปู.jpg" alt="">
+                    <img src="/project_database/img/products/ข้าวผัดปู.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ข้าวผัดปู</h5>
@@ -124,7 +124,7 @@
                     <a href="sproduct4.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct7.php';">
-                    <img src="/img/products/บัวลอยไข่หวาน.jpg" alt="">
+                    <img src="/project_database/img/products/บัวลอยไข่หวาน.jpg" alt="">
                     <div class="des">
                         <span>Dessert</span>
                         <h5>บัวลอยไข่หวาน</h5>

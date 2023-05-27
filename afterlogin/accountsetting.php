@@ -16,7 +16,7 @@
 				<div class="profile-tab-nav border-right">
 					<div class="p-4">
 						<div class="img-circle text-center mb-3">
-							<img src="/img/lee.jpg" alt="" id="profile-pic">
+							<img src="/project_database/img/lee.jpg" alt="" id="profile-pic">
 							<!-- <img src="img/user2.jpg" alt="Image" class="shadow"> -->
 						</div>
 						<h4 class="text-center">Bundit Than-iam</h4>
@@ -40,7 +40,7 @@
 							<i class="fa fa-tv text-center mr-1"></i> 
 							Promotion
 						</a> -->
-						<a href="afterlogin.html" class="nav-link"  aria-controls="promotion" aria-selected="false">
+						<a href="afterlogin.php" class="nav-link"  aria-controls="promotion" aria-selected="false">
 							<i class="fa fa-tv text-center mr-1"></i> 
 							Back to home
 						</a>

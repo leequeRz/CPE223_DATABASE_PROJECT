@@ -10,25 +10,27 @@
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="/beforelogin/style.css">
+        <link rel="stylesheet" href="/project_database/beforelogin/style.css">
     </head>
 
     <body>
         <section id="header">
-            <a href="index.html" class="headerlogo">ARHERELEE</a>
+            <a href="index.php" class="headerlogo">ARHERELEE</a>
             
             <div>
                 <ul id="navbar">
-                    <li><a href="/beforelogin/index.html">HOME</a></li>
-                    <li><a href="/beforelogin/shop.html">SHOP</a></li>
-                    <!-- <li><a href="blog.html">BLOG</a></li> -->
-                    <li><a href="/beforelogin/login.html">LOGIN NOW</a></li>
-                    <li id="lg-bag"><a class="active" href="cart.html"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li><a href="afterlogin.php">HOME</a></li>
+                    <li><a href="afshop.php">SHOP</a></li>
+                    <li><a href="table.php">TABLE</a></li>
+                    <li><a href="index.php">LOGOUT</a></li>
+                    <!-- <li><a href="blog.php">BLOG</a></li> -->
+                    <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
+                    <li id="lg-bag"><a class="active" href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
             <div id="mobile">
-                <a href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+                <a href="cart.php"><i class='bx bx-shopping-bag'></i></a>
                 <i id="bar" class="fas fa-outdent"></i>
                 
             </div>
@@ -36,9 +38,9 @@
 
         <section id="page-header">
             
-            <h2>AR-HERE-LEE</h2>
+            <!-- <h2>AR-HERE-LEE</h2>
             
-            <p>เอนจอยค้าบโผม</p>
+            <p>เอนจอยค้าบโผม</p> -->
             
         </section>
 
@@ -57,7 +59,7 @@
                 <tbody>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="img/products/burger.jpg" alt=""></td>
+                        <td><img src="/project_database/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>
@@ -65,7 +67,7 @@
                     </tr>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="img/products/burger.jpg" alt=""></td>
+                        <td><img src="/project_database/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>
@@ -73,7 +75,7 @@
                     </tr>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="img/products/burger.jpg" alt=""></td>
+                        <td><img src="/project_database/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>

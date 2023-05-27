@@ -36,19 +36,19 @@
 
         <section id="prodetails" class="section-p1">
             <div class="single-pro-image">
-                <img src="/img/products/ข้าวผัดปู.jpg" width="100%" height="500px" id="MainImg" alt="">
+                <img src="/project_database/img/products/ข้าวผัดปู.jpg" width="100%" height="500px" id="MainImg" alt="">
                 <!-- <div class="small-img-group">
                     <div class="small-img-col">
-                        <img src="/img/products/f1.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f1.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/f2.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f2.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/f3.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f3.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/img/products/f4.jpg" width="100%" class="small-img" alt="">
+                        <img src="/project_database/img/products/f4.jpg" width="100%" class="small-img" alt="">
                     </div>
                 </div> -->
             </div>
@@ -76,7 +76,7 @@
             <p>เมนู Recomment ของทางร้าน</p>
             <div class="pro-container">
                 <div class="pro" onclick="window.location.href='sproduct5.php';">
-                    <img src="/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
+                    <img src="/project_database/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>ซาลาเปาหมูสับไข่เค็ม</h5>
@@ -92,7 +92,7 @@
                     <a href="sproduct5.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct3.php';">
-                    <img src="/img/products/ขนมจีบกุ้ง.jpg" alt="">
+                    <img src="/project_database/img/products/ขนมจีบกุ้ง.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>ขนมจีบกุ้ง</h5>
@@ -108,7 +108,7 @@
                     <a href="sproduct3.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct.php';">
-                    <img src="/img/products/burger.jpg" alt="">
+                    <img src="/project_database/img/products/burger.jpg" alt="">
                     <div class="des">
                         <span>Fast Food</span>
                         <h5>Burger คำโตๆ</h5>
@@ -124,7 +124,7 @@
                     <a href="sproduct.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct8.php';">
-                    <img src="/img/products/ผัดไทยทะเล.jpeg" alt="">
+                    <img src="/project_database/img/products/ผัดไทยทะเล.jpeg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ผัดไททะเล</h5>
