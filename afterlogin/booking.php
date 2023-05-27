@@ -23,7 +23,7 @@ $row = mysqli_fetch_array($result);
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/database_project/beforelogin/style.css">
 </head>
 
 <body>

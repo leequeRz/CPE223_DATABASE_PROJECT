@@ -10,7 +10,7 @@
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="/project_database/beforelogin/style.css">
+        <link rel="stylesheet" href="/database_project/beforelogin/style.css">
     </head>
 
     <body>
@@ -48,7 +48,7 @@
             <h2>MENU ARHERELEE</h2>
             <div class="pro-container">
                 <div class="pro" onclick="window.location.href='/beforelogin/sproduct.php';">
-                    <img src="/project_database/img/products/burger.jpg" alt="">
+                    <img src="/database_project/img/products/burger.jpg" alt="">
                     <div class="des">
                         <span>Fast food</span>
                         <h5>Burger คำโตๆ</h5>
@@ -64,7 +64,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='/beforelogin/sproduct2.php';">
-                    <img src="/project_database/img/products/" alt="">
+                    <img src="/database_project/img/products/" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -80,7 +80,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f3.jpg" alt="">
+                    <img src="/database_project/img/products/f3.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -96,7 +96,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f4.jpg" alt="">
+                    <img src="/database_project/img/products/f4.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -112,7 +112,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f5.jpg" alt="">
+                    <img src="/database_project/img/products/f5.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -128,7 +128,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f6.jpg" alt="">
+                    <img src="/database_project/img/products/f6.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -144,7 +144,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f7.jpg" alt="">
+                    <img src="/database_project/img/products/f7.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -160,7 +160,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -176,7 +176,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -192,7 +192,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -208,7 +208,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -224,7 +224,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -240,7 +240,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -256,7 +256,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -272,7 +272,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>
@@ -288,7 +288,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro">
-                    <img src="/project_database/img/products/f8.jpg" alt="">
+                    <img src="/database_project/img/products/f8.jpg" alt="">
                     <div class="des">
                         <span>ชื่อแบรน์</span>
                         <h5>ชื่ออาหาร</h5>

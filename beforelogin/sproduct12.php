@@ -36,19 +36,19 @@
 
         <section id="prodetails" class="section-p1">
             <div class="single-pro-image">
-                <img src="/project_database/img/products/โกโก้ปั่น.jpg" width="100%"  height="500px" id="MainImg" alt="">
+                <img src="/databasa_project/img/products/โกโก้ปั่น.jpg" width="100%"  height="500px" id="MainImg" alt="">
                 <!-- <div class="small-img-group">
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f1.jpg" width="100%" class="small-img" alt="">
+                        <img src="/databasa_project/img/products/f1.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f2.jpg" width="100%" class="small-img" alt="">
+                        <img src="/databasa_project/img/products/f2.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f3.jpg" width="100%" class="small-img" alt="">
+                        <img src="/databasa_project/img/products/f3.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f4.jpg" width="100%" class="small-img" alt="">
+                        <img src="/databasa_project/img/products/f4.jpg" width="100%" class="small-img" alt="">
                     </div>
                 </div> -->
             </div>
@@ -76,7 +76,7 @@
             <p>เมนู Recomment ของทางร้าน</p>
             <div class="pro-container">
                 <div class="pro" onclick="window.location.href='sproduct14.php';">
-                    <img src="/project_database/img/products/pepsi 550ml.jpg" alt="">
+                    <img src="/databasa_project/img/products/pepsi 550ml.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>เป๊ปซี่</h5>
@@ -92,7 +92,7 @@
                     <a href="sproduct14.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct15.php';">
-                    <img src="/project_database/img/products/sprite.jpg" alt="">
+                    <img src="/databasa_project/img/products/sprite.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>สไปร์ท</h5>
@@ -108,7 +108,7 @@
                     <a href="sproduct15.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct13.php';">
-                    <img src="/project_database/img/products/โกโก้เย็น.jpg" alt="">
+                    <img src="/databasa_project/img/products/โกโก้เย็น.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>โกโก้เย็น</h5>
@@ -124,7 +124,7 @@
                     <a href="sproduct13.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct16.php';">
-                    <img src="/project_database/img/products/น้ำแร่.jpg" alt="">
+                    <img src="/databasa_project/img/products/น้ำแร่.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>น้ำแร่</h5>

@@ -16,7 +16,7 @@
 				<div class="profile-tab-nav border-right">
 					<div class="p-4">
 						<div class="img-circle text-center mb-3">
-							<img src="/project_database/img/lee.jpg" alt="" id="profile-pic">
+							<img src="/database_project/img/lee.jpg" alt="" id="profile-pic">
 							<!-- <img src="img/user2.jpg" alt="Image" class="shadow"> -->
 						</div>
 						<h4 class="text-center">Bundit Than-iam</h4>

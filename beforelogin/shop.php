@@ -53,7 +53,7 @@
             <h2>MENU ARHERELEE</h2>
             <div class="pro-container">
                 <div class="pro" onclick="window.location.href='sproduct.php';">
-                    <img src="/project_database/img/products/burger.jpg" alt="">
+                    <img src="/database_project/img/products/burger.jpg" alt="">
                     <div class="des">
                         <span>Fast food</span>
                         <h5>Burger คำโตๆ</h5>
@@ -69,7 +69,7 @@
                     <a href="sproduct.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct2.php';">
-                    <img src="/project_database/img/products/กะเพราหมูกรอบ.jpg" alt="">
+                    <img src="/database_project/img/products/กะเพราหมูกรอบ.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>กระเพราะหมูกรอบ</h5>
@@ -85,7 +85,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct3.php';">
-                    <img src="/project_database/img/products/ขนมจีบกุ้ง.jpg" alt="">
+                    <img src="/database_project/img/products/ขนมจีบกุ้ง.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>ขนมจีบกุ้ง</h5>
@@ -101,7 +101,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro"onclick="window.location.href='sproduct4.php';">
-                    <img src="/project_database/img/products/ข้าวผัดปู.jpg" alt="">
+                    <img src="/database_project/img/products/ข้าวผัดปู.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ข้าวผัดปู</h5>
@@ -117,7 +117,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct5.php';">
-                    <img src="/project_database/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
+                    <img src="/database_project/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>ซาลาเปาหมูสับไข่เค็ม</h5>
@@ -133,7 +133,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct6.php';">
-                    <img src="/project_database/img/products/ต้มยำกุ้ง.jpg" alt="">
+                    <img src="/database_project/img/products/ต้มยำกุ้ง.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ต้มยำกุ้ง</h5>
@@ -149,7 +149,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct7.php';">
-                    <img src="/project_database/img/products/บัวลอยไข่หวาน.jpg" alt="">
+                    <img src="/database_project/img/products/บัวลอยไข่หวาน.jpg" alt="">
                     <div class="des">
                         <span>Dessert</span>
                         <h5>บัวลอยไข่หวาน</h5>
@@ -165,7 +165,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct8.php';">
-                    <img src="/project_database/img/products/ผัดไทยทะเล.jpeg" alt="">
+                    <img src="/database_project/img/products/ผัดไทยทะเล.jpeg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ผัดไททะเล</h5>
@@ -181,7 +181,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct9.php';">
-                    <img src="/project_database/img/products/ส้มตำไทย.jpg" alt="">
+                    <img src="/database_project/img/products/ส้มตำไทย.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ส้มตำไทย</h5>
@@ -197,7 +197,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct10.php';">
-                    <img src="/project_database/img/products/เป็ดปักกิ่งง.jpg" alt="">
+                    <img src="/database_project/img/products/เป็ดปักกิ่งง.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>เป็ดปักกิ่ง</h5>
@@ -213,7 +213,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct11.php';">
-                    <img src="/project_database/img/products/แกงส้มกุ้ง.jpeg" alt="">
+                    <img src="/database_project/img/products/แกงส้มกุ้ง.jpeg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>แกงส้มกุ้ง</h5>
@@ -229,7 +229,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct12.php';">
-                    <img src="/project_database/img/products/โกโก้ปั่น.jpg" alt="">
+                    <img src="/database_project/img/products/โกโก้ปั่น.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>โกโก้ปั่น</h5>
@@ -245,7 +245,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct13.php';">
-                    <img src="/project_database/img/products/โกโก้เย็น.jpg" alt="">
+                    <img src="/database_project/img/products/โกโก้เย็น.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>โกโก้เย็น</h5>
@@ -261,7 +261,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct14.php';">
-                    <img src="/project_database/img/products/pepsi 550ml.jpg" alt="">
+                    <img src="/database_project/img/products/pepsi 550ml.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>เป๊ปซี่</h5>
@@ -277,7 +277,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct15.php';">
-                    <img src="/project_database/img/products/sprite.jpg" alt="">
+                    <img src="/database_project/img/products/sprite.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>สไปร์ท</h5>
@@ -293,7 +293,7 @@
                     <a href="#"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct16.php';">
-                    <img src="/project_database/img/products/น้ำแร่.jpg" alt="">
+                    <img src="/database_project/img/products/น้ำแร่.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>น้ำแร่</h5>
@@ -312,8 +312,8 @@
         </section>
 
         <section id="pagination" class="section-p1">
-            <a href="/project_database/beforelogin/shop.php">1</a>
-            <a href="/project_database/beforelogin/shop2.php">2</a>
+            <a href="/database_project/beforelogin/shop.php">1</a>
+            <a href="/database_project/beforelogin/shop2.php">2</a>
             <!-- <a href="#"><i class="fa-solid fa-arrow-right"></i></a> -->
         </section>
         

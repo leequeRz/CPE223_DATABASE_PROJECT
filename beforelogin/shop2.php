@@ -45,7 +45,7 @@
             <h2>MENU ARHERELEE</h2>
             <div class="pro-container">
                 <div class="pro" onclick="window.location.href='sproduct17.php';">
-                    <img src="/project_database/img/products/กุ้งแช่น้ำปลา.jpg" alt="">
+                    <img src="/database_project/img/products/กุ้งแช่น้ำปลา.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>กุ้งแช่น้ำปลา</h5>
@@ -61,7 +61,7 @@
                     <a href="sproduct.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct18.php';">
-                    <img src="/project_database/img/products/ทอดมันกุ้ง.jpg" alt="">
+                    <img src="/database_project/img/products/ทอดมันกุ้ง.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ทอดมันกุ้ง</h5>

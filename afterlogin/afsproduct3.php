@@ -10,7 +10,7 @@
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="/project_database/beforelogin/style.css">
+        <link rel="stylesheet" href="/database_project/beforelogin/style.css">
     </head>
 
     <body>
@@ -38,19 +38,19 @@
 
         <section id="prodetails" class="section-p1">
             <div class="single-pro-image">
-                <img src="/project_database/img/products/ขนมจีบกุ้ง.jpg" width="100%" height="500px" id="MainImg" alt="">
+                <img src="/database_project/img/products/ขนมจีบกุ้ง.jpg" width="100%" height="500px" id="MainImg" alt="">
                 <!-- <div class="small-img-group">
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f1.jpg" width="100%" class="small-img" alt="">
+                        <img src="/database_project/img/products/f1.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f2.jpg" width="100%" class="small-img" alt="">
+                        <img src="/database_project/img/products/f2.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f3.jpg" width="100%" class="small-img" alt="">
+                        <img src="/database_project/img/products/f3.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f4.jpg" width="100%" class="small-img" alt="">
+                        <img src="/database_project/img/products/f4.jpg" width="100%" class="small-img" alt="">
                     </div>
                 </div> -->
             </div>
@@ -78,7 +78,7 @@
             <p>เมนู Recomment ของทางร้าน</p>
             <div class="pro-container">
                 <div class="pro" onclick="window.location.href='afsproduct4.php';">
-                    <img src="/project_database/img/products/ข้าวผัดปู.jpg" alt="">
+                    <img src="/database_project/img/products/ข้าวผัดปู.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ข้าวผัดปู</h5>
@@ -94,7 +94,7 @@
                     <a href="afsproduct4.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='afsproduct10.php';">
-                    <img src="/project_database/img/products/เป็ดปักกิ่งง.jpg" alt="">
+                    <img src="/database_project/img/products/เป็ดปักกิ่งง.jpg" alt="">
                     <div class="des">
                         <span>Chinese Food</span>
                         <h5>เป็ดปักกิ่งง</h5>
@@ -110,7 +110,7 @@
                     <a href="afsproduct10.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='afsproduct12.php';">
-                    <img src="/project_database/img/products/โกโก้ปั่น.jpg" alt="">
+                    <img src="/database_project/img/products/โกโก้ปั่น.jpg" alt="">
                     <div class="des">
                         <span>Drink</span>
                         <h5>โกโก้ปั่น</h5>
@@ -126,7 +126,7 @@
                     <a href="afsproduct12.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='afsproduct7.php';">
-                    <img src="/project_database/img/products/บัวลอยไข่หวาน.jpg" alt="">
+                    <img src="/database_project/img/products/บัวลอยไข่หวาน.jpg" alt="">
                     <div class="des">
                         <span>Dessert</span>
                         <h5>บัวลอยไข่หวาน</h5>

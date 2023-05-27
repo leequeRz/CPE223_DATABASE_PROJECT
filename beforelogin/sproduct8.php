@@ -36,19 +36,19 @@
 
         <section id="prodetails" class="section-p1">
             <div class="single-pro-image">
-                <img src="/project_database/img/products/ผัดไทยทะเล.jpeg" width="100%" height="500px" id="MainImg" alt="">
+                <img src="/database_project/img/products/ผัดไทยทะเล.jpeg" width="100%" height="500px" id="MainImg" alt="">
                 <!-- <div class="small-img-group">
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f1.jpg" width="100%" class="small-img" alt="">
+                        <img src="/database_project/img/products/f1.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f2.jpg" width="100%" class="small-img" alt="">
+                        <img src="/database_project/img/products/f2.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f3.jpg" width="100%" class="small-img" alt="">
+                        <img src="/database_project/img/products/f3.jpg" width="100%" class="small-img" alt="">
                     </div>
                     <div class="small-img-col">
-                        <img src="/project_database/img/products/f4.jpg" width="100%" class="small-img" alt="">
+                        <img src="/database_project/img/products/f4.jpg" width="100%" class="small-img" alt="">
                     </div>
                 </div> -->
             </div>
@@ -76,7 +76,7 @@
             <p>เมนู Recomment ของทางร้าน</p>
             <div class="pro-container">
                 <div class="pro">
-                    <img src="/project_database/img/products/ต้มยำกุ้ง.jpg" alt="" onclick="window.location.href='sproduct6.php';">
+                    <img src="/database_project/img/products/ต้มยำกุ้ง.jpg" alt="" onclick="window.location.href='sproduct6.php';">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ต้มยำกุ้ง</h5>
@@ -92,7 +92,7 @@
                     <a href="sproduct6.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct11.php';">
-                    <img src="/project_database/img/products/แกงส้มกุ้ง.jpeg" alt="">
+                    <img src="/database_project/img/products/แกงส้มกุ้ง.jpeg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>แกงส้มกุ้ง</h5>
@@ -108,7 +108,7 @@
                     <a href="sproduct11.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct4.php';">
-                    <img src="/project_database/img/products/ข้าวผัดปู.jpg" alt="">
+                    <img src="/database_project/img/products/ข้าวผัดปู.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ข้าวผัดปู</h5>
@@ -124,7 +124,7 @@
                     <a href="sproduct4.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
                 <div class="pro" onclick="window.location.href='sproduct9.php';">
-                    <img src="/project_database/img/products/ส้มตำไทย.jpg" alt="">
+                    <img src="/database_project/img/products/ส้มตำไทย.jpg" alt="">
                     <div class="des">
                         <span>Thai Food</span>
                         <h5>ส้มตำไทย</h5>

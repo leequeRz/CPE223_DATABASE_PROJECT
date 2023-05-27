@@ -10,7 +10,7 @@
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="/project_database/beforelogin/style.css">
+        <link rel="stylesheet" href="/database_project/beforelogin/style.css">
     </head>
 
     <body>
@@ -59,7 +59,7 @@
                 <tbody>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="/project_database/img/products/burger.jpg" alt=""></td>
+                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>
@@ -67,7 +67,7 @@
                     </tr>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="/project_database/img/products/burger.jpg" alt=""></td>
+                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>
@@ -75,7 +75,7 @@
                     </tr>
                     <tr>
                         <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="/project_database/img/products/burger.jpg" alt=""></td>
+                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
                         <td>Burger</td>
                         <td>79 บาท</td>
                         <td><input type="number" value="1"></td>

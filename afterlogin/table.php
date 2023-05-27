@@ -21,7 +21,7 @@ $result = mysqli_query($condb, $query);
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  
 
-    <link rel="stylesheet" href="/project_database/beforelogin/style.css">
+    <link rel="stylesheet" href="/database_project/beforelogin/style.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@ $result = mysqli_query($condb, $query);
                 <li><a href="afshop.php">SHOP</a></li>
                 <li><a class="active" href="table.php">TABLE</a></li>
                 <!-- <li><a href="blog.php">BLOG</a></li> -->
-                <li><a href="/project_database/beforelogin/index.php">LOGOUT</a></li>
+                <li><a href="/database_project/beforelogin/index.php">LOGOUT</a></li>
                 <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
                 <li id="lg-bag"><a href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>

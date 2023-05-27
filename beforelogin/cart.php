@@ -19,10 +19,10 @@
             
             <div>
                 <ul id="navbar">
-                    <li><a href="/project_database/beforelogin/index.php">HOME</a></li>
-                    <li><a href="/project_database/beforelogin/shop.php">SHOP</a></li>
+                    <li><a href="/database_project/beforelogin/index.php">HOME</a></li>
+                    <li><a href="/database_project/beforelogin/shop.php">SHOP</a></li>
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
-                    <li><a href="/project_database/beforelogin/login.php">LOGIN NOW</a></li>
+                    <li><a href="/database_project/beforelogin/login.php">LOGIN NOW</a></li>
                     <li id="lg-bag"><a class="active" href="cart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>

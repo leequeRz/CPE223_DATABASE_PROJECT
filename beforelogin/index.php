@@ -47,7 +47,7 @@
             <section id="hero-banner">
                 <div class="slider">
                     <div class="slide active">
-                        <img src="/project_database/img/banner/banner1.png" alt="">
+                        <img src="/database_project/img/banner/banner1.png" alt="">
                         <div class="info">
                             <div class="info2">
                                 <h2>Welcome to ARHERELEE</h2>
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/project_database/img/banner/banner2.png"
+                        <img src="/database_project/img/banner/banner2.png"
                             alt="">
                         <div class="info">
                             <div class="info2">
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="/project_database/img/banner/banner3.png" alt="">
+                        <img src="/database_project/img/banner/banner3.png" alt="">
                         <!-- <div class="info">
                             <div class="info2">
                                 <h2>ORDER NOW</h2>
@@ -97,23 +97,23 @@
         
             <section id="feature" class="section-p1">
                 <div class="fe-box">
-                    <img src="/project_database/img/features/online-shop.png" alt="">
+                    <img src="/database_project/img/features/online-shop.png" alt="">
                     <h6>Online Shop</h6>
                 </div>
                 <div class="fe-box">
-                    <img src="/project_database/img/features/free shipping.png" alt="">
+                    <img src="/database_project/img/features/free shipping.png" alt="">
                     <h6>Free Shipping</h6>
                 </div>
                 <div class="fe-box">
-                    <img src="/project_database/img/features/fresh food.png" alt="">
+                    <img src="/database_project/img/features/fresh food.png" alt="">
                     <h6>Fresh Food</h6>
                 </div>
                 <div class="fe-box">
-                    <img src="/project_database/img/features/online seat.png" alt="">
+                    <img src="/database_project/img/features/online seat.png" alt="">
                     <h6>Seat Online</h6>
                 </div>
                 <div class="fe-box">
-                    <img src="/project_database/img/features/food inter.png" alt="">
+                    <img src="/database_project/img/features/food inter.png" alt="">
                     <h6>All Food Nationality</h6>
                 </div>
             </section>
@@ -130,7 +130,7 @@
             <section id="product1" class="section-p1">
                 <div class="pro-container">
                     <div class="pro" onclick="window.location.href='sproduct.php';">
-                        <img src="/project_database/img/products/burger.jpg" alt="">
+                        <img src="/database_project/img/products/burger.jpg" alt="">
                         <div class="des">
                             <span>Fast food</span>
                             <h5>Burger คำโตๆ</h5>
@@ -146,7 +146,7 @@
                         <a href="sproduct.php"><i class='bx bx-cart cartbuy'></i></a>
                     </div>
                     <div class="pro" onclick="window.location.href='sproduct10.php';">
-                        <img src="/project_database/img/products/เป็ดปักกิ่งง.jpg" alt="">
+                        <img src="/database_project/img/products/เป็ดปักกิ่งง.jpg" alt="">
                         <div class="des">
                             <span>Chinese Food</span>
                             <h5>เป็ดปักกื่งแสนอร่อย</h5>
@@ -162,7 +162,7 @@
                         <a href="sproduct10.php"><i class='bx bx-cart cartbuy'></i></a>
                     </div>
                     <div class="pro" onclick="window.location.href='sproduct2.php';">
-                        <img src="/project_database/img/products/กะเพราหมูกรอบ.jpg" alt="">
+                        <img src="/database_project/img/products/กะเพราหมูกรอบ.jpg" alt="">
                         <div class="des">
                             <span>Thai Food</span>
                             <h5>กระเพราหมูกรอบ</h5>
@@ -178,7 +178,7 @@
                         <a href="sproduct2.php"><i class='bx bx-cart cartbuy'></i></a>
                     </div>
                     <div class="pro" onclick="window.location.href='sproduct6.php';">
-                        <img src="/project_database/img/products/ต้มยำกุ้ง.jpg" alt="">
+                        <img src="/database_project/img/products/ต้มยำกุ้ง.jpg" alt="">
                         <div class="des">
                             <span>Thai Food</span>
                             <h5>ต้มยำกุ้ง</h5>
@@ -194,7 +194,7 @@
                         <a href="sproduct6.php"><i class='bx bx-cart cartbuy'></i></a>
                     </div>
                     <div class="pro" onclick="window.location.href='sproduct9.php';">
-                        <img src="/project_database/img/products/ส้มตำไทย.jpg" alt="">
+                        <img src="/database_project/img/products/ส้มตำไทย.jpg" alt="">
                         <div class="des">
                             <span>Thai Food</span>
                             <h5>ส้มตำไทย</h5>
@@ -210,7 +210,7 @@
                         <a href="sproduct9.php"><i class='bx bx-cart cartbuy'></i></a>
                     </div>
                     <div class="pro" onclick="window.location.href='sproduct7.php';">
-                        <img src="/project_database/img/products/บัวลอยไข่หวาน.jpg" alt="">
+                        <img src="/database_project/img/products/บัวลอยไข่หวาน.jpg" alt="">
                         <div class="des">
                             <span>Dessert</span>
                             <h5>บัวลอยไข่หวาน</h5>
@@ -226,7 +226,7 @@
                         <a href="sproduct7.php"><i class='bx bx-cart cartbuy'></i></a>
                     </div>
                     <div class="pro" onclick="window.location.href='sproduct11.php';">
-                        <img src="/project_database/img/products/แกงส้มกุ้ง.jpeg" alt="">
+                        <img src="/database_project/img/products/แกงส้มกุ้ง.jpeg" alt="">
                         <div class="des">
                             <span>Thai Food</span>
                             <h5>แกงส้มกุ้ง</h5>
@@ -242,7 +242,7 @@
                         <a href="sproduct11.php"><i class='bx bx-cart cartbuy'></i></a>
                     </div>
                     <div class="pro" onclick="window.location.href='sproduct5.php';">
-                        <img src="/project_database/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
+                        <img src="/database_project/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
                         <div class="des">
                             <span>Chinese Food</span>
                             <h5>ซาลาเปาหมูสับไข่เค็ม</h5>
