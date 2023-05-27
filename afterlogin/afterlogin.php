@@ -1,3 +1,9 @@
+<?php
+
+	session_start();
+	require_once '../db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +29,7 @@
                     <li><a href="afshop.php">SHOP</a></li>
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
                     <li><a href="table.php">TABLE</a></li>
-                    <li><a href="/database_project/beforelogin/login.php">LOGOUT</a></li>
+                    <li><a href="logout.php">LOGOUT</a></li>
                     <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
                     <li id="lg-bag"><a href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>

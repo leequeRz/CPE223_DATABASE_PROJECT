@@ -1,3 +1,8 @@
+<?php
+
+	session_start();
+	require_once '../db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,31 @@
     <title>Register ArHereLee</title>
 </head>
 <body>
+<form name="inpfrm" method="post" action="register_to.php">
+    <?php if(isset($_SESSION['error'])) { ?>
+    <div class="alert alert-danger"  role="alert">
+            <?php
+                echo $_SESSION['error'];
+                unset ($_SESSION['error']);
+            ?>
+    </div>
+    <?php  } ?>
+    <?php if(isset($_SESSION['success'])) { ?>
+    <div class="alert alert-success"  role="alert">
+            <?php
+                echo $_SESSION['success'];
+                unset ($_SESSION['success']);
+            ?>
+    </div>
+    <?php  } ?>
+    <?php if(isset($_SESSION['warning'])) { ?>
+    <div class="alert alert-warning"  role="alert">
+            <?php
+                echo $_SESSION['warning'];
+                unset ($_SESSION['warning']);
+            ?>
+    </div>
+    <?php  } ?>
     <div class="wrapper">
         <div class="container main">
             <div class="row">
@@ -28,33 +58,33 @@
                             <label for="username">Username</label>
                         </div> -->
                         <div class="input-field">
-                            <input type="text" class="input" id="email" required>
+                            <input name="email" type="text" class="input" id="email" required>
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field">
-                            <input type="password" class="input" id="password" required>
+                            <input name="password" type="password" class="input" id="password" required>
                             <label for="password">Password</label>
                         </div>
                         <div class="input-field">
-                            <input type="password" class="input" id="confirm-password" required>
+                            <input name="confirm-password" type="password" class="input" id="confirm-password" required>
                             <label for="confirm-password">Confirm-Password</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" class="input" id="firstname" required>
+                            <input name="firstname" type="text" class="input" id="firstname" required>
                             <label for="firstname">Firstname</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" class="input" id="lastname" required>
+                            <input name="lastname" type="text" class="input" id="lastname" required>
                             <label for="firstname">Lastname</label>
                         </div>
                         <div class="input-field">
-                            <input type="text" class="input" id="tel" required>
+                            <input name="tel" type="text" class="input" id="tel" required>
                             <label for="tel">Tel.</label>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date of Birth</label>
-                                <input type="date" class="form-control" value="">
+                                <input name="date" type="date" class="form-control" value="">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -63,15 +93,14 @@
                                   <form>
                                     <label for="gender">Gender:</label>
                                     <select id="gender" name="gender">
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="other">Other</option>
+                                        <option value="M">Male</option>
+                                        <option value="F">Female</option>
                                     </select>
                                 </form>
                             </div>
                         </div>
                         <div class="input-field">
-                            <input type="submit" class="submit" Value="Sign Up">
+                            <input name="signup" type="submit" class="submit" Value="Sign Up">
                         </div>
                         <div class="signin">
                             <span>Already have an account?<a href="login.php"> Log in here</a></span>
@@ -81,5 +110,6 @@
             </div>
         </div>
     </div>
+</form>
 </body>
 </html>
