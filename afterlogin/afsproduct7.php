@@ -25,7 +25,7 @@
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
                     <li><a href="/beforelogin/index.php">LOGOUT</a></li>
                     <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
-                    <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li id="lg-bag"><a href="/database_projcet/afterlogin/afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>

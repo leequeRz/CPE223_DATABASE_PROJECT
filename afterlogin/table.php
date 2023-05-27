@@ -15,7 +15,7 @@ $result = mysqli_query($condb, $query);
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>แสดงรายชื่อโต๊ะจากฐานข้อมูล PHP+MySQLi+Bootstrap4</title>
+    <title>จองโต๊ะ</title>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -50,20 +50,21 @@ $result = mysqli_query($condb, $query);
     <section id="page-table">
     </section>
 
-    <section id="title" class="section-p3">
+    <!-- <section id="title" class="section-p3">
         <h2>TABLES</h2>
-    </section>
+    </section> -->
 
     <div class="container">
         <div class="row">
             <div class="col-sm-2 col-md-2"></div>
-            <div class="col-12 col-sm-11 col-md-7">
+            <div class="col-12 col-sm-11 col-md-7" style="text-align: center;">
                 <br>
-                <h4 align="center" style="color: red;">แสดงรายชื่อโต๊ะจากฐานข้อมูล PHP+MySQLi+Bootstrap4</h4>
+                <h3 align="center" style="color: red;">รายการโต๊ะทั้งหมดของร้าน</h3>
+                <h2 align="center" style="color: red;"><b>ARHERELEE</b></h2>
                 <br>
                 <div class="row">
                     <div class="col-sm-12 col-md-12">
-                        <div class="alert alert-warning" role="alert">
+                        <div class="alert alert-warning h2" role="alert">
                             <center>Tables</center>
                         </div>
                         <hr>
