@@ -2,9 +2,18 @@
 //เรียกใช้งานไฟล์เชื่อมต่อฐานข้อมูล
 require ('condb.php');
 //query
-$query = "SELECT * FROM tbl_table ORDER BY id ASC";
+$query = "SELECT * FROM seat_reserve ORDER BY reserve_id ASC";
 $result = mysqli_query($condb, $query);
+// $row = mysqli_fetch_array($result);
+    session_start();
+	require_once '../db.php';
+    if(!isset($_SESSION['user_login'])){
+        // header('location: index.php');
+        echo 'ไม่มีข้อมูล';
+    }
+
 ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -71,11 +80,16 @@ $result = mysqli_query($condb, $query);
                         <div class="row" style="margin-bottom: 20px;margin-left: 50px",>
                             <?php foreach ($result as $row) {
                                 if ($row['table_status'] == 0) { //ว่าง
+                                    // $_SESSION['table_name']=$row['table_name'];
                                     echo '<div class="col-2 col-md-2 col-sm-2" style="margin: 5px;">';
-                                    echo '<a href="booking.php?id=' . $row["id"] . '&act=booking"class="btn btn-success" target="_blank">' . $row['table_name'] . '</a></div>';
+                                    
+                                    echo '<a href="booking.php?id=' . $row["reserve_id"] . '&act=booking "class="btn btn-success" target="_blank">' . $row['table_name'] . '</a></div>';
+                                    
                                 } else { //ถูกจอง
+                                    // $_SESSION['table_name']=$row['table_name'];
                                     echo '<div class="col-2 col-md-2 col-sm-2" style="margin: 5px;">';
                                     echo '<a href="#" class="btn btn-secondary disabled" target="_blank">' . $row['table_name'] . '</a></div>';
+                                    
                                 }
                             } ?>
                         </div>

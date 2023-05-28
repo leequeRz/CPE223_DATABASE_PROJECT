@@ -2,10 +2,16 @@
 //เรียกใช้งานไฟล์เชื่อมต่อฐานข้อมูล
 require_once 'condb.php';
 //query
-$query = "SELECT * FROM tbl_table WHERE id=$_GET[id]";
+$query = "SELECT * FROM seat_reserve sr,seat_type st WHERE sr.reserve_id=$_GET[id] AND sr.seat_type_id=st.seat_type_id";
 $result = mysqli_query($condb, $query);
 $row = mysqli_fetch_array($result);
 //print_r($row);
+    session_start();
+	require_once '../db.php';
+    if(!isset($_SESSION['user_login'])){
+        // header('location: index.php');
+        echo 'ไม่มีข้อมูล';
+    }
 ?>
 <!doctype html>
 <html lang="en">
@@ -36,7 +42,7 @@ $row = mysqli_fetch_array($result);
                 <li><a href="afshop.php">SHOP</a></li>
                 <li><a class="active" href="table.php">TABLE</a></li>
                 <!-- <li><a href="blog.php">BLOG</a></li> -->
-                <li><a href="/beforelogin/index.php">LOGOUT</a></li>
+                <li><a href="/beforelogin/home.php">LOGOUT</a></li>
                 <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
                 <li id="lg-bag"><a href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
@@ -66,12 +72,16 @@ $row = mysqli_fetch_array($result);
                         </div>
                         <hr>
                         <div style="margin-left: 20px;">
+
+
+                        <!--  save_booking.php  -->
                             <form action="save_booking.php" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-2 ">เลขโต๊ะ</label>
                                     <div class="col-sm-4">
                                         <input type="text" name="table_name" class="form-control" disabled
                                             value="<?php echo $row['table_name']; ?>">
+                                            <?php $_SESSION['table_name'] = $row['table_name'];?>
                                     </div>
                                 </div>
                                 <div class="form-group row">
