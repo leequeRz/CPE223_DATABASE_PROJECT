@@ -1,3 +1,31 @@
+<?php
+
+	session_start();
+	require_once 'condb.php';
+    if(!isset($_SESSION['user_login'])){
+        // header('location: index.php');
+        echo 'ไม่มีข้อมูล';
+    }
+
+    if(isset($_POST['add_to_cart'])){
+        
+        $user_id=$_SESSION['user_login'];
+        $product_id = $_POST['product_id'];
+        $product_quantity = $_POST['product_quantity'];
+     
+        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE product_id = '$product_id' AND user_id = '$user_id'") or die('query failed');
+     
+        if(mysqli_num_rows($select_cart) > 0){
+           $message[] = 'product already added to cart!';
+        }else{
+           mysqli_query($condb, "INSERT INTO `cart`(user_id, quantity) VALUES('$user_id', '$product_quantity')") or die('query failed');
+           $message[] = 'product added to cart!';
+        }
+     
+     };
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,9 +51,9 @@
                     <li><a class="active" href="afshop.php">SHOP</a></li>
                     <li><a href="table.php">TABLE</a></li>
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
-                    <li><a href="/beforelogin/index.php">LOGOUT</a></li>
+                    <li><a href="logout.php">LOGOUT</a></li>
                     <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
-                    <li id="lg-bag"><a href="/afterlogin/afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li id="lg-bag"><a href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
@@ -47,7 +75,46 @@
         <section id="product1" class="section-p1">
             <h2>MENU ARHERELEE</h2>
             <div class="pro-container">
-                <div class="pro" onclick="window.location.href='afsproduct.php';">
+            <?php 
+                    $select_product = mysqli_query($condb, "SELECT * FROM product") or die('query failed');
+                    if(mysqli_num_rows($select_product) > 0){
+                        while($fetch_product = mysqli_fetch_assoc($select_product)){
+                ?>
+                    <form method="post" class="box" action="afcart.php">
+                        <div class="pro">
+                        <img src="../products/<?php echo $fetch_product['image']; ?>">
+                        <div class="des">
+                        <?php  
+                        $category_id = $fetch_product['category_id']; 
+                        $select_category = mysqli_query($condb, "SELECT * FROM category WHERE category_id = '$category_id'");
+                        $row = mysqli_fetch_assoc($select_category);
+                        { ?>  
+                        
+ 
+                            <span><?php echo $row['category_name']; ?> </span>
+                        <?php } ?> 
+                            <h5><?php echo $fetch_product['product_name']; ?></h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4><?php echo $fetch_product['price']; ?></h4>
+                            <input type="number" min="1" name="product_quantity" value="1">
+                            <input type="hidden" name="product_id" value="<?php echo $fetch_product['product_id']; ?>">
+                            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                        </div>
+                        <!-- <a href="afcart.php"><i class='bx bx-cart cartbuy'></i></a> -->
+                    </div>
+                    </form>
+                <?php
+                    };
+                };
+            ?>
+
+                <!-- <div class="pro">
                     <img src="/database_project/img/products/burger.jpg" alt="">
                     <div class="des">
                         <span>Fast food</span>
@@ -63,6 +130,10 @@
                     </div>
                     <a href="afsproduct.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
+
+
+
+
                 <div class="pro" onclick="window.location.href='afsproduct2.php';">
                     <img src="/database_project/img/products/กะเพราหมูกรอบ.jpg" alt="">
                     <div class="des">
@@ -303,7 +374,7 @@
                     </div>
                     <a href="sproduct16.php"><i class='bx bx-cart cartbuy'></i></a>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section id="pagination" class="section-p1">

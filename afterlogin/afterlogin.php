@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	require_once '../db.php';
+	require_once 'condb.php';
     if(!isset($_SESSION['user_login'])){
         // header('location: index.php');
         echo 'ไม่มีข้อมูล';
@@ -156,137 +156,48 @@
         </section>
 
         <section id="product1" class="section-p1">
+            <h2>MENU ARHERELEE</h2>
             <div class="pro-container">
-                <div class="pro" onclick="window.location.href='afsproduct.php';">
-                    <img src="/database_project/img/products/burger.jpg" alt="">
-                    <div class="des">
-                        <span>Fast food</span>
-                        <h5>Burger คำโตๆ</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+            <?php 
+                    $select_product = mysqli_query($condb, "SELECT * FROM product") or die('query failed');
+                    if(mysqli_num_rows($select_product) > 0){
+                        while($fetch_product = mysqli_fetch_assoc($select_product)){
+                ?>
+                    <form method="post" class="box" action="afcart.php">
+                        <div class="pro">
+                        <img src="../products/<?php echo $fetch_product['image']; ?>">
+                        <div class="des">
+                        <?php  
+                        $category_id = $fetch_product['category_id']; 
+                        $select_category = mysqli_query($condb, "SELECT * FROM category WHERE category_id = '$category_id'");
+                        $row = mysqli_fetch_assoc($select_category);
+                        { ?>  
+                        
+ 
+                            <span><?php echo $row['category_name']; ?> </span>
+                        <?php } ?> 
+                            <h5><?php echo $fetch_product['product_name']; ?></h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4><?php echo $fetch_product['price']; ?></h4>
+                            <input type="number" min="1" name="product_quantity" value="1">
+                            <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
+                            <input type="hidden" name="product_name" value="<?php echo $fetch_product['product_name']; ?>">
+                            <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
+                            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
                         </div>
-                        <h4>79 บาท</h4>
+                        <!-- <a href="afcart.php"><i class='bx bx-cart cartbuy'></i></a> -->
                     </div>
-                    <a href="/afterlogin/afsproduct.php"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro" onclick="window.location.href='afsproduct10.php';">
-                    <img src="/database_project/img/products/เป็ดปักกิ่งง.jpg" alt="">
-                    <div class="des">
-                        <span>Chinese Food</span>
-                        <h5>เป็ดปักกื่งแสนอร่อย</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>109 บาท</h4>
-                    </div>
-                    <a href="/afterlogin/afsproduct10.php"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro" onclick="window.location.href='afsproduct2.php';">
-                    <img src="/database_project/img/products/กะเพราหมูกรอบ.jpg" alt="">
-                    <div class="des">
-                        <span>Thai Food</span>
-                        <h5>กระเพราหมูกรอบ</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>70 บาท</h4>
-                    </div>
-                    <a href="/afterlogin/afsproduct2.php"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro" onclick="window.location.href='afsproduct6.php';">
-                    <img src="/database_project/img/products/ต้มยำกุ้ง.jpg" alt="">
-                    <div class="des">
-                        <span>Thai Food</span>
-                        <h5>ต้มยำกุ้ง</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>80 บาท</h4>
-                    </div>
-                    <a href="/afterlogin/afsproduct6.php"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro" onclick="window.location.href='afsproduct9.php';">
-                    <img src="/database_project/img/products/ส้มตำไทย.jpg" alt="">
-                    <div class="des">
-                        <span>Thai Food</span>
-                        <h5>ส้มตำไทย</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>50 บาท</h4>
-                    </div>
-                    <a href="/afterlogin/afsproduct9.php"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro" onclick="window.location.href='afsproduct7.php';">
-                    <img src="/database_project/img/products/บัวลอยไข่หวาน.jpg" alt="">
-                    <div class="des">
-                        <span>Dessert</span>
-                        <h5>บัวลอยไข่หวาน</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>40 บาท</h4>
-                    </div>
-                    <a href="/afterlogin/afsproduct7.php"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro" onclick="window.location.href='afsproduct11.php';">
-                    <img src="/database_project/img/products/แกงส้มกุ้ง.jpeg" alt="">
-                    <div class="des">
-                        <span>Thai Food</span>
-                        <h5>แกงส้มกุ้ง</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>60 บาท</h4>
-                    </div>
-                    <a href="/afterlogin/afsproduct11.php"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-                <div class="pro" onclick="window.location.href='afsproduct5.php';">
-                    <img src="/database_project/img/products/ซาลาเปาหมูสับไข่เค็ม.jpg" alt="">
-                    <div class="des">
-                        <span>Chinese Food</span>
-                        <h5>ซาลาเปาหมูสับไข่เค็ม</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>30 บาท</h4>
-                    </div>
-                    <a href="/afterlogin/afsproduct5.php"><i class='bx bx-cart cartbuy'></i></a>
-                </div>
-            </div>
-        </section>
+                    </form>
+                <?php
+                    };
+                };
+            ?>
 
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/10876e5229.js" crossorigin="anonymous"></script>
