@@ -25,6 +25,10 @@ if(isset($_POST['update_cart'])){
     header('location:afcart.php');
  }
  
+ 
+
+
+
  ?>
 
 <!DOCTYPE html>
@@ -38,11 +42,28 @@ if(isset($_POST['update_cart'])){
         <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300&family=Poppins:wght@600&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="/database_project/beforelogin/style.css">
     </head>
 
     <body>
+    <?php if(isset($_SESSION['error'])) { ?>
+    <div class="alert alert-danger"  role="alert">
+            <?php
+                echo $_SESSION['error'];
+                unset ($_SESSION['error']);
+            ?>
+    </div>
+    <?php  } ?>
+    <?php if(isset($_SESSION['success'])) { ?>
+    <div class="alert alert-success"  role="alert">
+            <?php
+                echo $_SESSION['success'];
+                unset ($_SESSION['success']);
+            ?>
+    </div>
+    <?php  } ?>
         <section id="header">
             <a href="index.php" class="headerlogo">ARHERELEE</a>
             
@@ -72,7 +93,7 @@ if(isset($_POST['update_cart'])){
             <p>เอนจอยค้าบโผม</p> -->
             
         </section>
-        <form action="confirm_payment.php" method="post">
+        
         <section id="cart" class="section-p1">
             <table>
                 <thead>
@@ -93,8 +114,8 @@ if(isset($_POST['update_cart'])){
                 ?>
                     <tr>
                     <?php  
-                        $product_id = $fetch_product['product_id']; 
-                        $select_product = mysqli_query($condb, "SELECT * FROM category WHERE product_id = '$product_id'");
+                        $product_id = $fetch_cart['product_id']; 
+                        $select_product = mysqli_query($condb, "SELECT * FROM product WHERE product_id = '$product_id' ");
                         $row = mysqli_fetch_assoc($select_product);
                     { ?>  
                         <td><img src="../products/<?php echo $row['image']; ?>" height="100" alt=""></td>
@@ -127,16 +148,19 @@ if(isset($_POST['update_cart'])){
                 </tr>
                 </tbody>
             </table>
-            <input type="submit" name="confirm_payment" value="Confirm" class="btn">
+            <form action="confirm_payment.php" method="post">
+                <input type="submit" name="confirm_payment" value="Confirm" class="btn">
         </section>
-        
-        
+        </form>
+
         <section id="card-add" class="section-p1">
             <div id="coupon">
                 <h3>Apply Coupon</h3>
                 <div>
-                    <input type="text" placeholder="Enter Your Coupon">
-                    <button class="normal">Apply</button>
+                <form action="check.php" method="post">
+                    <input type="text" name ="coupon" class="input">
+                    <input type="submit" name="check_coupon" value="Apply" class="option-btn">
+                </form>
                 </div>
                 <div class="halfpayhalforeder">
                     <div class="payment-method">
@@ -145,8 +169,8 @@ if(isset($_POST['update_cart'])){
 					        <form>
 						        <label for="paymethod">Type:</label>
 						        <select id="paymethod" name="paymethod">
-							        <option value="CREDIT">CARD</option>
-							        <option value="DEBIT">CASH</option>
+							        <option value="PAY1">CARD</option>
+							        <option value="PAY2">CASH</option>
 						        </select>
 					        </form>
 				        </div>
@@ -167,7 +191,7 @@ if(isset($_POST['update_cart'])){
             </div>
         
         </section>
-    </form>
+    
         <script src="/beforelogin/script.js"></script>
         <script src="https://kit.fontawesome.com/10876e5229.js" crossorigin="anonymous"></script>
     </body>

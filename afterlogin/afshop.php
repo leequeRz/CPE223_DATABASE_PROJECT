@@ -13,12 +13,12 @@
         $product_id = $_POST['product_id'];
         $product_quantity = $_POST['product_quantity'];
      
-        $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE product_id = '$product_id' AND user_id = '$user_id'") or die('query failed');
+        $select_cart = mysqli_query($condb, "SELECT * FROM `cart` WHERE product_id = '$product_id' AND user_id = '$user_id'") or die('query failed');
      
         if(mysqli_num_rows($select_cart) > 0){
            $message[] = 'product already added to cart!';
         }else{
-           mysqli_query($condb, "INSERT INTO `cart`(user_id, quantity) VALUES('$user_id', '$product_quantity')") or die('query failed');
+           mysqli_query($condb, "INSERT INTO `cart`(product_id, user_id, quantity) VALUES('$product_id', '$user_id', '$product_quantity')") or die('query failed');
            $message[] = 'product added to cart!';
         }
      
@@ -80,7 +80,7 @@
                     if(mysqli_num_rows($select_product) > 0){
                         while($fetch_product = mysqli_fetch_assoc($select_product)){
                 ?>
-                    <form method="post" class="box" action="afcart.php">
+                    <form method="post" class="box" action="">
                         <div class="pro">
                         <img src="../products/<?php echo $fetch_product['image']; ?>">
                         <div class="des">
