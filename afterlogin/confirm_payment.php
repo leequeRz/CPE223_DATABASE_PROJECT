@@ -22,7 +22,9 @@ if(isset($_POST['confirm_payment'])) {
                 $row1 = mysqli_fetch_assoc($sel);
                 if($row1['user_address_line1'] != NULL){
                     $_SESSION['success']='ทำการสั่งซื้อสำเร็จ';
-                    $update = "UPDATE billing SET user_id='$user_id' , total='$total', order_type_id='$order_type', payment_id='$payment'";
+                    // $update = "UPDATE billing SET user_id='$user_id' , total_price='$total', order_type_id='$order_type', payment_id='$payment'";
+                    $update = "INSERT INTO billing( user_id , total_price, order_type_id, payment_id) 
+                    VALUES ('$user_id','$total','$order_type','$payment')";
                     mysqli_query($condb, $update);
                     header('location:afterlogin.php');
                 }else{
@@ -31,7 +33,8 @@ if(isset($_POST['confirm_payment'])) {
                 }
             }else{
                 $_SESSION['success']='ทำการสั่งซื้อสำเร็จ';
-                $update = "UPDATE billing SET user_id='$user_id' , total='$total', order_type_id='$order_type', payment_id='$payment'";
+                // $update = "UPDATE billing SET user_id='$user_id' , total_price='$total', order_type_id='$order_type', payment_id='$payment'";
+                $update = "INSERT INTO billing( user_id , total_price, order_type_id, payment_id)  VALUES ('$user_id','$total','$order_type','$payment')";
                 mysqli_query($condb, $update);
                 header('location:afterlogin.php');
             }
@@ -46,7 +49,8 @@ if(isset($_POST['confirm_payment'])) {
             $row1 = mysqli_fetch_assoc($sel);
             if($row1['user_address_line1'] != NULL){
                 $_SESSION['success']='ทำการสั่งซื้อสำเร็จ';
-                $update = "UPDATE billing SET user_id='$user_id' , total='$total', order_type_id='$order_type', payment_id='$payment'";
+                // $update = "UPDATE billing SET user_id='$user_id' , total_price='$total', order_type_id='$order_type', payment_id='$payment'";
+                $update = "INSERT INTO billing( user_id , total_price, order_type_id, payment_id)  VALUES ('$user_id','$total','$order_type','$payment')";
                 mysqli_query($condb, $update);
                 header('location:afterlogin.php');
             }else{
@@ -55,8 +59,10 @@ if(isset($_POST['confirm_payment'])) {
             }
         }else{
             $_SESSION['success']='ทำการสั่งซื้อสำเร็จ';
-            // $update = "UPDATE billing SET user_id='$user_id' , total='$total', order_type_id='$order_type', payment_id='$payment'";
-            // mysqli_query($condb, $update);
+            // $update = "UPDATE billing SET user_id='$user_id' , total_price='$total', order_type_id='$order_type', payment_id='$payment'";
+            $update = "INSERT INTO billing( user_id , total_price, order_type_id, payment_id)  VALUES ('$user_id','$total','$order_type','$payment')";
+            // $update = "INSERT INTO billing( user_id , total_price)  VALUES ('$user_id','$total')";
+            mysqli_query($condb, $update);
             header('location:afterlogin.php');
         }
     }

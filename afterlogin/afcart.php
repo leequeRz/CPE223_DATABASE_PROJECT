@@ -147,6 +147,7 @@ if (isset($_GET['delete_all'])) {
                     <tr class="table-bottom">
                         <td colspan="4">grand total :</td>
                         <td>$<?php     echo $grand_total;
+                            $_SESSION['total']=$grand_total;
             
                         ?>/-</td>
                         <td><a href="afcart.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">delete all</a></td>
@@ -155,9 +156,9 @@ if (isset($_GET['delete_all'])) {
             </table>
 
     </div>
-    <form action="confirm_payment.php" method="post">
-        <input type="submit" name="confirm_payment" value="Confirm" class="btn">
-    </form>
+    <!-- <form action="confirm_payment.php" method="post">
+        <input type="submit" name="confirm_payment" value="Confirm" class="btn"> -->
+    
     <section id="card-add" class="section-p1">
         <div id="coupon">
             <h3>Apply Coupon</h3>
@@ -168,35 +169,36 @@ if (isset($_GET['delete_all'])) {
                     <input type="submit" name="check_coupon" value="Apply" class="option-btn">
                 </form>
             </div>
-           
+     <form action="confirm_payment.php" method="post">
+     <input type="submit" name="confirm_payment" value="Confirm" class="btn">
             <div class="halfpayhalforeder">
                 <div class="payment-method">
                     <h3>Payment Method</h3>
                     <div class="form-group">
-                        <form>
+                        
                             <label for="paymethod">Type:</label>
                             <select id="paymethod" name="paymethod">
                                 <option value="PAY1">CARD</option>
                                 <option value="PAY2">CASH</option>
                             </select>
-                        </form>
+                        
                     </div>
                 </div>
                 <div class="order-type">
                     <h3>Order Type</h3>
                     <div class="form-group">
-                        <form>
+                        
                             <label for="ordertype">Type:</label>
                             <select id="ordertype" name="ordertype">
                                 <option value="OT001">ONLINE</option>
                                 <option value="OT002">ONSITE</option>
                             </select>
-                        </form>
+                        
                     </div>
                 </div>
             </div>
             
-            
+            </form>
         </div>
 
     </section>

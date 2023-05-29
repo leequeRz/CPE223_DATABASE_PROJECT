@@ -175,8 +175,8 @@ if (isset( $_SESSION['minimum'] )  ) {
         </table>
     </div>
 
-    <form action="confirm_payment.php" method="post">
-            <input type="submit" name="confirm_payment" value="Confirm" class="btn">
+    <!-- <form action="confirm_payment.php" method="post">
+            <input type="submit" name="confirm_payment" value="Confirm" class="btn"> -->
     </form>
     <section id="card-add" class="section-p1">
         <div id="coupon">
@@ -188,30 +188,31 @@ if (isset( $_SESSION['minimum'] )  ) {
                     <input type="submit" name="check_coupon" value="Apply" class="option-btn">
                 </form>
             </div>
-            
+        <form action="confirm_payment.php" method="post">
+        <input type="submit" name="confirm_payment" value="Confirm" class="btn">
             <div class="halfpayhalforeder">
                 <div class="payment-method">
                     <h3>Payment Method</h3>
                     <div class="form-group">
-                        <form>
+                        
                             <label for="paymethod">Type:</label>
                             <select id="paymethod" name="paymethod">
                                 <option value="PAY1">CARD</option>
                                 <option value="PAY2">CASH</option>
                             </select>
-                        </form>
+                        
                     </div>
                 </div>
                 <div class="order-type">
                     <h3>Order Type</h3>
                     <div class="form-group">
-                        <form>
+                    
                             <label for="ordertype">Type:</label>
                             <select id="ordertype" name="ordertype">
                                 <option value="OT001">ONLINE</option>
                                 <option value="OT002">ONSITE</option>
                             </select>
-                        </form>
+                    
                     </div>
                 </div>
             </div>
