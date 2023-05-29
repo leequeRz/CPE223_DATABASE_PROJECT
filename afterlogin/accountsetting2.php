@@ -158,7 +158,14 @@
         $card_number = $_POST['card_number'];
         $cvv = $_POST['cvv'];
         $exp = $_POST['expire_month'];
-        $card_type = $_POST['card_type_id'];
+        $card_type_id = isset($_POST['card_type_id']);
+        // if (isset($_POST['card_type_id'])) {
+        //     $cardTypeId = $_POST['card_type_id'];
+        //     // Rest of your code that uses the $cardTypeId variable
+        // } else {
+        //     // Handle the case when the "card_type_id" key is not set
+        //     echo "Error: 'card_type_id' is not set.";
+        // }
 
         if(($card_number !="") && ($cvv !="")&& ($exp !="")){
             
@@ -166,16 +173,16 @@
             $select = mysqli_query($condb, $query);
             $row = mysqli_fetch_assoc($select);
             
-            echo $row;
+            // echo $row;
             if($row > 0){
                 
-                    $update = "UPDATE payment_card SET card_number='$card_number', cvv='$cvv', expire_month='$exp', card_type_id='$card_type' WHERE user_id = $id";
+                    $update = "UPDATE payment_card SET card_number='$card_number', cvv='$cvv', expire_month='$exp', card_type_id='$card_type_id' WHERE user_id = $id";
                     mysqli_query($condb, $update);
                     $_SESSION['success'] ='อัพเดท card สำเร็จ';
                     header("Loacation: accountsetting2.php");
                 
             }else{
-                $insert = "INSERT INTO payment_card(card_number, cvv, expire_month, card_type_id) VALUES ('$card_number','$cvv','$exp','$card_type')";
+                $insert = "INSERT INTO payment_card(card_number, cvv, expire_month, card_type_id) VALUES ('$card_number','$cvv','$exp','$card_type_id') ";
 
                 $result = mysqli_query($condb, $insert);
 
@@ -450,7 +457,7 @@
                                             <label>Card type</label>
                                             <form>
                                                 <label for="cardtype">Type:</label>
-                                                <select id="cardtype" name="card_type_id">
+                                                <select id="card_type_id" name="card_type_id">
                                                     <option value="CRE">CREDIT</option>
                                                     <option value="DEB">DEBIT</option>
                                                 </select>
