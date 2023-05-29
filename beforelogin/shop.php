@@ -30,7 +30,7 @@
                     <li><a class="active" href="shop.php">SHOP</a></li>
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
                     <li><a href="login.php">LOGIN NOW</a></li>
-                    <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag'></i></a></li>
+                    <!-- <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag'></i></a></li> -->
                     <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
                 ?>
                     <form method="post" class="box" action="afcart.php">
                         <div class="pro">
-                        <img src="products/<?php echo $fetch_product['image']; ?>">
+                        <img src="../products/<?php echo $fetch_product['image']; ?>">
                         <div class="des">
                         <?php  
                         $category_id = $fetch_product['category_id']; 
@@ -98,11 +98,11 @@
                 };
             ?>
 
-        <section id="pagination" class="section-p1">
+        <!-- <section id="pagination" class="section-p1">
             <a href="/database_project/beforelogin/shop.php">1</a>
             <a href="/database_project/beforelogin/shop2.php">2</a>
-            <!-- <a href="#"><i class="fa-solid fa-arrow-right"></i></a> -->
-        </section>
+            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+        </section> -->
         
         <script src="/beforelogin/script.js"></script>
         <script src="https://kit.fontawesome.com/10876e5229.js" crossorigin="anonymous"></script>

@@ -41,12 +41,12 @@
                         <li><a href="shop.php">SHOP</a></li>
                         <!-- <li><a href="blog.php">BLOG</a></li> -->
                         <li><a href="login.php">LOGIN NOW</a></li>
-                        <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag'></i></a></li>
+                        <!-- <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag'></i></a></li> -->
                         <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                     </ul>
                 </div>
                 <div id="mobile">
-                    <a href="cart.php"><i class='bx bx-shopping-bag'></i></a>
+                    <!-- <a href="cart.php"><i class='bx bx-shopping-bag'></i></a> -->
                     <i id="bar" class="fas fa-outdent"></i>
         
                 </div>
@@ -144,7 +144,6 @@
             </section>
         
             <section id="product1" class="section-p1">
-            <h2>MENU ARHERELEE</h2>
             <div class="pro-container">
             <?php 
                     $select_product = mysqli_query($condb, "SELECT * FROM product") or die('query failed');
@@ -153,7 +152,7 @@
                 ?>
                     <form method="post" class="box" action="afcart.php">
                         <div class="pro">
-                        <img src="products/<?php echo $fetch_product['image']; ?>">
+                        <img src="../products/<?php echo $fetch_product['image']; ?>">
                         <div class="des">
                         <?php  
                         $category_id = $fetch_product['category_id']; 

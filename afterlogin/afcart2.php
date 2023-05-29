@@ -12,7 +12,7 @@ if (isset($_POST['update_cart'])) {
     $update_id = $_POST['cart_id'];
     mysqli_query($condb, "UPDATE `cart` SET quantity = '$update_quantity' WHERE cart_id = '$update_id'") or die('query failed');
     $_SESSION['success'] = 'Cart quantity updated successfully!';
-   
+    $minimumcost = 0;
     header('location: afcart.php');
     exit;
 }
@@ -20,18 +20,30 @@ if (isset($_POST['update_cart'])) {
 if (isset($_GET['remove'])) {
     $remove_id = $_GET['remove'];
     mysqli_query($condb, "DELETE FROM `cart` WHERE cart_id = '$remove_id'") or die('query failed');
-    
+    $minimumcost = 0;
     header('location: afcart.php');
     exit;
 }
 
 if (isset($_GET['delete_all'])) {
     mysqli_query($condb, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
-    
+    $minimumcost = 0;
     header('location: afcart.php');
     exit;
 }
 
+if (isset( $_SESSION['coupon'] )  ) {
+    $discount = $_SESSION['coupon'];
+    // if (isset( $_SESSION['minimum'] )){
+        //$minimumcost = $_SESSION['minimum'];
+    }
+if (isset( $_SESSION['minimum'] )  ) {
+       // $discount = $_SESSION['coupon'];
+        // if (isset( $_SESSION['minimum'] )){
+            $minimumcost = $_SESSION['minimum'];
+        }
+     
+   
 
 
 
@@ -92,7 +104,7 @@ if (isset($_GET['delete_all'])) {
         </div>
     </section>
 
-    <section id="page-cart">
+    <section id="page-header">
 
         <!-- <h2>AR-HERE-LEE</h2>
 
@@ -102,61 +114,69 @@ if (isset($_GET['delete_all'])) {
 
     <div class="shopping-cart">
 
-            <table>
-                <thead>
-                    <th>image</th>
-                    <th>name</th>
-                    <th>price</th>
-                    <th>quantity</th>
-                    <th>total price</th>
-                    <th>action</th>
-                </thead>
-                <tbody>
-                    <?php
-                    $user_id = $_SESSION['user_login'];
-                    $cart_query = mysqli_query($condb, "SELECT * FROM `cart` WHERE user_id = $user_id ") or die('query failed');
-                    $grand_total = 0;
-                    if (mysqli_num_rows($cart_query) > 0) {
-                        while ($fetch_cart = mysqli_fetch_assoc($cart_query)) {
-                            $product_id = $fetch_cart['product_id'];
-                            $select_product = mysqli_query($condb, "SELECT * FROM product WHERE product_id = '$product_id' ");
-                            $row = mysqli_fetch_assoc($select_product);
-                            $sub_total = ($row['price'] * $fetch_cart['quantity']);
-                            $grand_total += $sub_total;
-                    ?>
-                            <tr>
-                                <td><img src="../products/<?php echo $row['image']; ?>" height="100" alt=""></td>
-                                <td><?php echo $row['product_name']; ?></td>
-                                <td>$<?php echo $row['price']; ?>/-</td>
-                                <td>
-                                    <form action="" method="post">
-                                        <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['cart_id']; ?>">
-                                        <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
-                                        <input type="submit" name="update_cart" value="update" class="option-btn">
-                                    </form>
-                                </td>
-                                <td>$<?php echo $sub_total; ?>/-</td>
-                                <td><a href="afcart.php?remove=<?php echo $fetch_cart['cart_id']; ?>" class="delete-btn" onclick="return confirm('remove item from cart?');">remove</a></td>
-                            </tr>
-                    <?php
-                        }
-                    } else {
-                        echo '<tr><td style="padding:20px; text-transform:capitalize;" colspan="6">no item added</td></tr>';
+        <table>
+            <thead>
+                <th>image</th>
+                <th>name</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>total price</th>
+                <th>action</th>
+            </thead>
+            <tbody>
+                <?php
+                $user_id = $_SESSION['user_login'];
+                $cart_query = mysqli_query($condb, "SELECT * FROM `cart` WHERE user_id = $user_id ") or die('query failed');
+                $grand_total = 0;
+                if (mysqli_num_rows($cart_query) > 0) {
+                    while ($fetch_cart = mysqli_fetch_assoc($cart_query)) {
+                        $product_id = $fetch_cart['product_id'];
+                        $select_product = mysqli_query($condb, "SELECT * FROM product WHERE product_id = '$product_id' ");
+                        $row = mysqli_fetch_assoc($select_product);
+                        $sub_total = ($row['price'] * $fetch_cart['quantity']);
+                        $grand_total += $sub_total;
+                ?>
+                        <tr>
+                            <td><img src="../products/<?php echo $row['image']; ?>" height="100" alt=""></td>
+                            <td><?php echo $row['product_name']; ?></td>
+                            <td>$<?php echo $row['price']; ?>/-</td>
+                            <td>
+                                <form action="" method="post">
+                                    <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['cart_id']; ?>">
+                                    <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
+                                    <input type="submit" name="update_cart" value="update" class="option-btn">
+                                </form>
+                            </td>
+                            <td>$<?php echo $sub_total; ?>/-</td>
+                            <td><a href="afcart.php?remove=<?php echo $fetch_cart['cart_id']; ?>" class="delete-btn" onclick="return confirm('remove item from cart?');">remove</a></td>
+                        </tr>
+                <?php
                     }
-                    ?>
-                    <tr class="table-bottom">
-                        <td colspan="4">grand total :</td>
-                        <td>$<?php     echo $grand_total;
-            
-                        ?>/-</td>
-                        <td><a href="afcart.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">delete all</a></td>
-                    </tr>
-                </tbody>
-            </table>
-
+                } else {
+                    echo '<tr><td style="padding:20px; text-transform:capitalize;" colspan="6">no item added</td></tr>';
+                }
+                ?>
+                <tr class="table-bottom">
+                    <td colspan="4">grand total :</td>
+                    <td>$<?php  
+                        if($grand_total - $discount > 0 ){
+                        $grand_totalx = $grand_total - $discount;
+                         echo $grand_totalx;
+                         $_SESSION['total']=$grand_totalx;
+                        }else{
+                            echo $grand_total;
+                            $_SESSION['total']=$grand_total;
+                        }
+                        
+                    ?>/-</td>
+                    <td><a href="afcart.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">delete all</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
     <form action="confirm_payment.php" method="post">
-        <input type="submit" name="confirm_payment" value="Confirm" class="btn">
+            <input type="submit" name="confirm_payment" value="Confirm" class="btn">
     </form>
     <section id="card-add" class="section-p1">
         <div id="coupon">
@@ -168,7 +188,7 @@ if (isset($_GET['delete_all'])) {
                     <input type="submit" name="check_coupon" value="Apply" class="option-btn">
                 </form>
             </div>
-           
+            
             <div class="halfpayhalforeder">
                 <div class="payment-method">
                     <h3>Payment Method</h3>
@@ -196,10 +216,10 @@ if (isset($_GET['delete_all'])) {
                 </div>
             </div>
             
-            
         </div>
 
     </section>
+
 
     <script src="/beforelogin/script.js"></script>
     <script src="https://kit.fontawesome.com/10876e5229.js" crossorigin="anonymous"></script>

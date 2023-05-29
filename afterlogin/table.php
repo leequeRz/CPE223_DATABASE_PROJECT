@@ -24,7 +24,7 @@ $result = mysqli_query($condb, $query);
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>จองโต๊ะ</title>
+    <title>Table</title>
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -38,7 +38,7 @@ $result = mysqli_query($condb, $query);
         <a href="afterlogin.php" class="headerlogo">ARHERELEE</a>
             
         <div>
-            <ul id="navbar-after">
+            <ul id="navbar">
                 <li><a href="afterlogin.php">HOME</a></li>
                 <li><a href="afshop.php">SHOP</a></li>
                 <li><a class="active" href="table.php">TABLE</a></li>

@@ -20,7 +20,7 @@
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300&family=Poppins:wght@600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/database_project/beforelogin/style.css">
     </head>
 
@@ -45,7 +45,7 @@
             <a href="afterlogin.php" class="headerlogo">ARHERELEE</a>
             
             <div>
-                <ul id="navbar-after">
+                <ul id="navbar">
                     <li><a class="active" href="afterlogin.php">HOME</a></li>
                     <li><a href="afshop.php">SHOP</a></li>
                     <!-- <li><a href="blog.php">BLOG</a></li> -->
@@ -156,7 +156,6 @@
         </section>
 
         <section id="product1" class="section-p1">
-            <h2>MENU ARHERELEE</h2>
             <div class="pro-container">
             <?php 
                     $select_product = mysqli_query($condb, "SELECT * FROM product") or die('query failed');
@@ -185,11 +184,9 @@
                                 <i class="fas fa-star"></i>
                             </div>
                             <h4><?php echo $fetch_product['price']; ?></h4>
-                            <input type="number" min="1" name="product_quantity" value="1">
                             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
                             <input type="hidden" name="product_name" value="<?php echo $fetch_product['product_name']; ?>">
                             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
-                            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
                         </div>
                         <!-- <a href="afcart.php"><i class='bx bx-cart cartbuy'></i></a> -->
                     </div>
