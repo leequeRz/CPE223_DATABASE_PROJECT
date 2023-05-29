@@ -101,7 +101,7 @@
                 $insert = "INSERT INTO user_address( user_id , user_address_line1, user_address_line2, user_city, user_province, user_postal_code) VALUES ('$id','$address1','$address2','$city','$province','$postalcode')";
                 $result = mysqli_query($condb, $insert);
                 if ($address2 == "") {
-                    $query = "UPDATE user_address SET address2 = NULL WHERE user_id = $id";
+                    $query = "UPDATE user_address SET user_address_line2 = NULL WHERE user_id = $id";
                     mysqli_query($condb, $query);
                     $_SESSION['success'] = "เพิ่ม address สำเร็จ";
                     header("Loacation: accountsetting2.php");
