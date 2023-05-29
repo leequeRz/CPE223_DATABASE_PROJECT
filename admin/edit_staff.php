@@ -4,17 +4,17 @@
     require_once '../config/db.php';
 
     if(!isset($_SESSION['staff_login'])){
-        // header('location: index.php');
-        echo 'ไม่มีข้อมูล';
+        header('location: index.php');
+        // echo 'ไม่มีข้อมูล';
     }
 
     $id = $_GET['edit'];
 
     // if(isset($_POST['submit'])) {
 
-        $staff_image = $_FILES['staff_image']['name'];
-        $staff_image_tmp_name = $_FILES['staff_image']['tmp_name'];
-        $staff_image_folder = '../img/'.$staff_image;
+        // $staff_image = $_FILES['staff_image']['name'];
+        // $staff_image_tmp_name = $_FILES['staff_image']['tmp_name'];
+        // $staff_image_folder = '../img/'.$staff_image;
 
     //     $update = "UPDATE product SET image='$staff_image' WHERE staff_id = $id";
 

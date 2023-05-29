@@ -3,8 +3,8 @@
 	session_start();
 	require_once 'condb.php';
     if(!isset($_SESSION['user_login'])){
-        // header('location: index.php');
-        echo 'ไม่มีข้อมูล';
+        header('location:../beforelogin/home.php');
+        // echo 'ไม่มีข้อมูล';
     }
 
     if(isset($_POST['add_to_cart'])){
@@ -81,8 +81,8 @@
                     if(mysqli_num_rows($select_product) > 0){
                         while($fetch_product = mysqli_fetch_assoc($select_product)){
                 ?>
-                    <form method="post" class="box" action="">
-                        <div class="pro">
+                    <form method="post" class="pro" action="">
+                        <div class="">
                         <img src="../products/<?php echo $fetch_product['image']; ?>">
                         <div class="des">
                         <?php  

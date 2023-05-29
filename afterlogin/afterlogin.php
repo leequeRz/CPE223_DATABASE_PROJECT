@@ -3,8 +3,8 @@
 	session_start();
 	require_once 'condb.php';
     if(!isset($_SESSION['user_login'])){
-        // header('location: index.php');
-        echo 'ไม่มีข้อมูล';
+        header('location:../beforelogin/home.php');
+        // echo 'ไม่มีข้อมูล';
     }
 ?>
 
@@ -162,8 +162,8 @@
                     if(mysqli_num_rows($select_product) > 0){
                         while($fetch_product = mysqli_fetch_assoc($select_product)){
                 ?>
-                    <form method="post" class="box" action="afcart.php">
-                        <div class="pro">
+                    <form method="post" class="pro" action="afcart.php">
+                        <div class="">
                         <img src="../products/<?php echo $fetch_product['image']; ?>">
                         <div class="des">
                         <?php  
@@ -183,7 +183,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <h4><?php echo $fetch_product['price']; ?></h4>
+                            <h4><?php echo $fetch_product['price']; ?> บาท</h4>
                             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
                             <input type="hidden" name="product_name" value="<?php echo $fetch_product['product_name']; ?>">
                             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">

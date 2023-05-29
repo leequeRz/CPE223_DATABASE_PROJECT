@@ -150,15 +150,15 @@
                     if(mysqli_num_rows($select_product) > 0){
                         while($fetch_product = mysqli_fetch_assoc($select_product)){
                 ?>
-                    <form method="post" class="box" action="afcart.php">
-                        <div class="pro">
-                        <img src="../products/<?php echo $fetch_product['image']; ?>">
-                        <div class="des">
-                        <?php  
-                        $category_id = $fetch_product['category_id']; 
-                        $select_category = mysqli_query($condb, "SELECT * FROM category WHERE category_id = '$category_id'");
-                        $row = mysqli_fetch_assoc($select_category);
-                        { ?>  
+                    <form method="post" class="pro" action="afcart.php">
+                        <div class="">
+                            <img src="../products/<?php echo $fetch_product['image']; ?>">
+                            <div class="des">
+                            <?php  
+                            $category_id = $fetch_product['category_id']; 
+                            $select_category = mysqli_query($condb, "SELECT * FROM category WHERE category_id = '$category_id'");
+                            $row = mysqli_fetch_assoc($select_category);
+                            { ?>  
                         
  
                             <span><?php echo $row['category_name']; ?> </span>
@@ -171,7 +171,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <h4><?php echo $fetch_product['price']; ?></h4>
+                            <h4><?php echo $fetch_product['price']; ?> บาท</h4>
                             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
                             <input type="hidden" name="product_name" value="<?php echo $fetch_product['product_name']; ?>">
                             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
@@ -179,10 +179,12 @@
                         <!-- <a href="afcart.php"><i class='bx bx-cart cartbuy'></i></a> -->
                     </div>
                     </form>
-                <?php
-                    };
-                };
-            ?>
+                    <?php
+                            };
+                        };
+                    ?>
+                </div>
+            </section>
         <!-- </div> -->
 
         <script src="script.js"></script>

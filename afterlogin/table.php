@@ -8,8 +8,8 @@ $result = mysqli_query($condb, $query);
     session_start();
 	require_once '../db.php';
     if(!isset($_SESSION['user_login'])){
-        // header('location: index.php');
-        echo 'ไม่มีข้อมูล';
+        header('location:../beforelogin/home.php');
+        // echo 'ไม่มีข้อมูล';
     }
 
 ?>
@@ -43,7 +43,7 @@ $result = mysqli_query($condb, $query);
                 <li><a href="afshop.php">SHOP</a></li>
                 <li><a class="active" href="table.php">TABLE</a></li>
                 <!-- <li><a href="blog.php">BLOG</a></li> -->
-                <li><a href="/database_project/beforelogin/index.php">LOGOUT</a></li>
+                <li><a href="logout.php">LOGOUT</a></li>
                 <li><a href="accountsetting2.php?edit=<?php echo $_SESSION['user_login']; ?>">ACCOUNT SETTING</a></li>
                 <li id="lg-bag"><a href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>

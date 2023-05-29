@@ -3,8 +3,8 @@
 	session_start();
 	require_once '../config/db.php';
     if(!isset($_SESSION['staff_login'])){
-        // header('location: index.php');
-        echo 'ไม่มีข้อมูล';
+        header('location: index.php');
+        
     }
 ?>
 
@@ -209,7 +209,7 @@
                             </div> -->
                         </div>
                     </div>
-                    <small class="text-muted">Last 1 Month</small>
+                    <small class="text-muted">Last 24 Hours</small>
                 </div>
             </div>
 
@@ -231,7 +231,7 @@
                     <tbody>
                         <?php
 
-                            $select = mysqli_query($conn, "SELECT * FROM billing b, payment_method pm, order_type ot, staff_info s WHERE b.payment_id = pm.payment_id AND b.order_type_id = ot.order_type_id AND b.staff_id = s.staff_id");
+                            $select = mysqli_query($conn, "SELECT * FROM billing b, payment_method pm, order_type ot WHERE b.payment_id = pm.payment_id AND b.order_type_id = ot.order_type_id");
 
                             while($row = mysqli_fetch_assoc($select)) {
 
@@ -261,7 +261,6 @@
                                     }
                                 ?>
                                 <!-- <td class="success"><?php echo $row['order_type_name']; ?></td> -->
-                                <td><?php echo $row['staff_firstname']; ?></td>
                                 <!-- <td><a href="#" class="button-detail">Details</a></td> -->
                                 <td><a href="order.php?delete=<?php echo $row['order_id']; ?>" class="button-delete">Delete</a></td>
                             </tr>
@@ -285,28 +284,29 @@
                 </div>
                 <!-- query ชื่อ user จาก db -->
                 <div class="profile">
-                <div class="info">
-                    <?php 
-                    if(isset($_SESSION['staff_login'])){
-                        $staff_id = $_SESSION['staff_login'];
-                        $select = mysqli_query($conn, "SELECT * FROM staff_info si, staff_position sp WHERE staff_id = $staff_id AND si.position_id = sp.position_id");
-                        $row = mysqli_fetch_assoc($select);
-                    }
-                    ?>
-                    <p>Hi!, <b><?php echo $row['staff_firstname'] ?></b></p>
-                    <small class="text-muted"><?php echo $row['position_name']?></small>
-                </div>
+                    <div class="info">
+                        <?php 
+                        if(isset($_SESSION['staff_login'])){
+                            $staff_id = $_SESSION['staff_login'];
+                            $select = mysqli_query($conn, "SELECT * FROM staff_info si, staff_position sp WHERE staff_id = $staff_id AND si.position_id = sp.position_id");
+                            $row = mysqli_fetch_assoc($select);
+                        }
+                        ?>
+                        <p>Hi!, <b><?php echo $row['staff_firstname'] ?></b></p>
+                        <small class="text-muted"><?php echo $row['position_name']?></small>
+                    </div>
                     <div class="profile-photo">
                         <img src="../img/default-profile.jpg">
                     </div>
                 </div>
             </div>
+
             <!-- Sales analytics -->
-            <!-- <div class="sales-analytics">
+            <div class="sales-analytics">
                 <h2>Sales Analytics</h2>
-                <div class="item-online">
+                <div class="item online">
                     <div class="icon">
-                        <i class="ri-shopping-cart-2-line"></i>
+                        <i class="ri-shopping-cart-2-fill"></i>
                     </div>
                     <div class="right">
                         <div class="info">
@@ -314,10 +314,121 @@
                             <small class="text-muted">Last 24 Hours</small>
                         </div>
                         <h5 class="success">+39%</h5>
-                        
+                        <?php
+                            $sql = "SELECT COUNT(*) as count_online FROM billing WHERE order_type_id = 'OT001'";
+                            $result = mysqli_query($conn, $sql);
+
+                            if ($result) {
+                                $fetch = mysqli_fetch_assoc($result);
+                                if ($fetch && isset($fetch['count_online'])) {
+                                    $userCount = $fetch['count_online'];
+                                    if ($userCount > 999) {
+                                        $userCount = number_format($userCount);
+                                    }
+                                } else {
+                                    $userCount = 0; // Set a default value if the query doesn't return valid data
+                                }
+                            } else {
+                                $userCount = 0; // Set a default value if the query fails
+                            }
+                        ?>
+                        <h1><?php echo $userCount; ?></h1>
                     </div>
                 </div>
-            </div> -->
+                <div class="item offline">
+                    <div class="icon">
+                        <i class="ri-shopping-basket-fill"></i>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>OFFLINE ORDERS</h3>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <h5 class="danger">-12%</h5>
+                        <?php
+                            $sql = "SELECT COUNT(*) as count_online FROM billing WHERE order_type_id = 'OT002'";
+                            $result = mysqli_query($conn, $sql);
+
+                            if ($result) {
+                                $fetch = mysqli_fetch_assoc($result);
+                                if ($fetch && isset($fetch['count_online'])) {
+                                    $userCount = $fetch['count_online'];
+                                    if ($userCount > 999) {
+                                        $userCount = number_format($userCount);
+                                    }
+                                } else {
+                                    $userCount = 0; // Set a default value if the query doesn't return valid data
+                                }
+                            } else {
+                                $userCount = 0; // Set a default value if the query fails
+                            }
+                            ?>
+                            <h1><?php echo $userCount; ?></h1>
+                    </div>
+                </div>
+                <div class="item card">
+                    <div class="icon">
+                        <i class="ri-bank-card-fill"></i>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>CARD METHOD</h3>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <h5 class="success">+69%</h5>
+                        <?php
+                            $sql = "SELECT COUNT(*) as count_card FROM billing WHERE payment_id = 'PAY1'";
+                            $result = mysqli_query($conn, $sql);
+
+                            if ($result) {
+                                $fetch = mysqli_fetch_assoc($result);
+                                if ($fetch && isset($fetch['count_card'])) {
+                                    $userCount = $fetch['count_card'];
+                                    if ($userCount > 999) {
+                                        $userCount = number_format($userCount);
+                                    }
+                                } else {
+                                    $userCount = 0; // Set a default value if the query doesn't return valid data
+                                }
+                            } else {
+                                $userCount = 0; // Set a default value if the query fails
+                            }
+                            ?>
+                            <h1><?php echo $userCount; ?></h1>
+                    </div>
+                </div>
+                <div class="item cash">
+                    <div class="icon">
+                        <i class="ri-cash-fill"></i>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>CASH METHOD</h3>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <h5 class="danger">-71%</h5>
+                        <?php
+                            $sql = "SELECT COUNT(*) as count_card FROM billing WHERE payment_id = 'PAY2'";
+                            $result = mysqli_query($conn, $sql);
+
+                            if ($result) {
+                                $fetch = mysqli_fetch_assoc($result);
+                                if ($fetch && isset($fetch['count_card'])) {
+                                    $userCount = $fetch['count_card'];
+                                    if ($userCount > 999) {
+                                        $userCount = number_format($userCount);
+                                    }
+                                } else {
+                                    $userCount = 0; // Set a default value if the query doesn't return valid data
+                                }
+                            } else {
+                                $userCount = 0; // Set a default value if the query fails
+                            }
+                            ?>
+                            <h1><?php echo $userCount; ?></h1>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

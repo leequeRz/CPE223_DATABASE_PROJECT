@@ -2,8 +2,8 @@
 session_start();
 require_once 'condb.php';
 if (!isset($_SESSION['user_login'])) {
-    echo 'ไม่มีข้อมูล';
-    exit; // Stop further execution if user is not logged in
+    header('location:../beforelogin/home.php');
+        // echo 'ไม่มีข้อมูล';
 }
 $user_id = $_SESSION['user_login'];
 
@@ -90,7 +90,7 @@ if (isset( $_SESSION['minimum'] )  ) {
                 <li><a href="afterlogin.php">HOME</a></li>
                 <li><a href="afshop.php">SHOP</a></li>
                 <li><a href="table.php">TABLE</a></li>
-                <li><a href="index.php">LOGOUT</a></li>
+                <li><a href="logout.php">LOGOUT</a></li>
                 <!-- <li><a href="blog.php">BLOG</a></li> -->
                 <li><a href="accountsetting2.php?edit=<?php echo $_SESSION['user_login']; ?>">ACCOUNT SETTING</a></li>
                 <li id="lg-bag"><a class="active" href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>

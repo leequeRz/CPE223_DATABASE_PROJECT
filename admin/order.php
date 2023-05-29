@@ -2,8 +2,8 @@
     session_start();
     require_once '../config/db.php';
     if(!isset($_SESSION['staff_login'])){
-        // header('location: index.php');
-        echo 'ไม่มีข้อมูล';
+        header('location: index.php');
+        // echo 'ไม่มีข้อมูล';
     }
 ?>
 
@@ -111,7 +111,7 @@
                     <tbody>
                         <?php
 
-                            $select = mysqli_query($conn, "SELECT * FROM billing b, payment_method pm, order_type ot, staff_info s WHERE b.payment_id = pm.payment_id AND b.order_type_id = ot.order_type_id AND b.staff_id = s.staff_id");
+                            $select = mysqli_query($conn, "SELECT * FROM billing b, payment_method pm, order_type ot WHERE b.payment_id = pm.payment_id AND b.order_type_id = ot.order_type_id");
 
                             while($row = mysqli_fetch_assoc($select)) {
 
@@ -141,7 +141,6 @@
                                     }
                                 ?>
                                 <!-- <td class="success"><?php echo $row['order_type_name']; ?></td> -->
-                                <td><?php echo $row['staff_firstname']; ?></td>
                                 <!-- <td><a href="#" class="button-detail">Details</a></td> -->
                                 <td><a href="order.php?delete=<?php echo $row['order_id']; ?>" class="button-delete">Delete</a></td>
                             </tr>

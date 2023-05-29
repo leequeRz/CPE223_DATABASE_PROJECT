@@ -4,8 +4,8 @@
     require_once 'condb.php';
 
     if(!isset($_SESSION['user_login'])){
-        // header('location: index.php');
-        echo 'ไม่มีข้อมูล';
+        header('location:../beforelogin/home.php');
+        // echo 'ไม่มีข้อมูล';
     }
 
     $id = @$_GET['edit'];
