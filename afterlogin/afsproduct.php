@@ -1,3 +1,12 @@
+<?php
+
+	session_start();
+	require_once 'condb.php';
+    if(!isset($_SESSION['user_login'])){
+        // header('location: index.php');
+        echo 'ไม่มีข้อมูล';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +63,7 @@
                     </div>
                 </div> -->
             </div>
-
+  
             <div class="single-pro-details">
                 <h7>Fast Food</h7>
                 <h4>Burger คำโตๆ</h4>

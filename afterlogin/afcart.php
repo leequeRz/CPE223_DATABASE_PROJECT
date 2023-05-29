@@ -1,3 +1,36 @@
+<?php
+
+    session_start();
+	require_once 'condb.php';
+    if(!isset($_SESSION['user_login'])){
+        // header('location: index.php');
+        echo 'ไม่มีข้อมูล';
+    }
+    $user_id=$_SESSION['user_login'];
+if(isset($_POST['update_cart'])){
+    $update_quantity = $_POST['cart_quantity'];
+    $update_id = $_POST['cart_id'];
+    mysqli_query($condb, "UPDATE `cart` SET quantity = '$update_quantity' WHERE cart_id = '$update_id'") or die('query failed');
+    $message[] = 'cart quantity updated successfully!';
+ }
+ 
+ if(isset($_GET['remove'])){
+    $remove_id = $_GET['remove'];
+    mysqli_query($condb, "DELETE FROM `cart` WHERE cart_id = '$remove_id'") or die('query failed');
+    header('location:afcart.php');
+ }
+   
+ if(isset($_GET['delete_all'])){
+    mysqli_query($condb, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+    header('location:afcart.php');
+ }
+ 
+ 
+
+
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +42,28 @@
         <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300&family=Poppins:wght@600&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="/database_project/beforelogin/style.css">
     </head>
 
     <body>
+    <?php if(isset($_SESSION['error'])) { ?>
+    <div class="alert alert-danger"  role="alert">
+            <?php
+                echo $_SESSION['error'];
+                unset ($_SESSION['error']);
+            ?>
+    </div>
+    <?php  } ?>
+    <?php if(isset($_SESSION['success'])) { ?>
+    <div class="alert alert-success"  role="alert">
+            <?php
+                echo $_SESSION['success'];
+                unset ($_SESSION['success']);
+            ?>
+    </div>
+    <?php  } ?>
         <section id="header">
             <a href="index.php" class="headerlogo">ARHERELEE</a>
             
@@ -43,77 +93,105 @@
             <p>เอนจอยค้าบโผม</p> -->
             
         </section>
-
+        
         <section id="cart" class="section-p1">
-            <table width="100%">
+            <table>
                 <thead>
-                    <tr>
-                        <td>Remove</td>
-                        <td>Image</td>
-                        <td>Product</td>
-                        <td>Price</td>
-                        <td>Quantity</td>
-                        <td>Subtotal</td>
-                    </tr>
+                    <th>image</th>
+                    <th>name</th>
+                    <th>price</th>
+                    <th>quantity</th>
+                    <th>total price</th>
+                    <th>action</th>
                 </thead>
                 <tbody>
+                <?php
+                   $user_id=$_SESSION['user_login'];
+                    $cart_query = mysqli_query($condb, "SELECT * FROM `cart` WHERE user_id = $user_id ") or die('query failed');
+                    $grand_total = 0;
+                    if(mysqli_num_rows($cart_query) > 0){
+                        while($fetch_cart = mysqli_fetch_assoc($cart_query)){
+                ?>
                     <tr>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
-                        <td>Burger</td>
-                        <td>79 บาท</td>
-                        <td><input type="number" value="1"></td>
-                        <td>79 บาท</td>
+                    <?php  
+                        $product_id = $fetch_cart['product_id']; 
+                        $select_product = mysqli_query($condb, "SELECT * FROM product WHERE product_id = '$product_id' ");
+                        $row = mysqli_fetch_assoc($select_product);
+                    { ?>  
+                        <td><img src="../products/<?php echo $row['image']; ?>" height="100" alt=""></td>
+                        <td><?php echo $row['product_name']; ?></td>
+                        <td>$<?php echo $row['price']; ?>/-</td>
+                    
+                        <td>
+                        <form action="" method="post">
+                            <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['cart_id']; ?>">
+                            <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
+                            <input type="submit" name="update_cart" value="update" class="option-btn">
+                        </form>
+                        </td>
+                        <td>$<?php echo $sub_total = ($row['price'] * $fetch_cart['quantity']); ?>/-</td>
+                        <td><a href="afcart.php?remove=<?php echo $fetch_cart['cart_id']; ?>" class="delete-btn" onclick="return confirm('remove item from cart?');">remove</a></td>
                     </tr>
-                    <tr>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
-                        <td>Burger</td>
-                        <td>79 บาท</td>
-                        <td><input type="number" value="1"></td>
-                        <td>79 บาท</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="/database_project/img/products/burger.jpg" alt=""></td>
-                        <td>Burger</td>
-                        <td>79 บาท</td>
-                        <td><input type="number" value="1"></td>
-                        <td>79 บาท</td>
-                    </tr>
+                    <?php } ?> 
+                <?php
+                    $grand_total += $sub_total;
+                        }
+                    
+                    }else{
+                        echo '<tr><td style="padding:20px; text-transform:capitalize;" colspan="6">no item added</td></tr>';
+                    }
+                ?>
+                <tr class="table-bottom">
+                    <td colspan="4">grand total :</td>
+                    <td>$<?php echo $grand_total; ?>/-</td>
+                    <td><a href="afcart.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">delete all</a></td>
+                </tr>
                 </tbody>
             </table>
+            <form action="confirm_payment.php" method="post">
+                <input type="submit" name="confirm_payment" value="Confirm" class="btn">
         </section>
-        
+        </form>
+
         <section id="card-add" class="section-p1">
             <div id="coupon">
                 <h3>Apply Coupon</h3>
                 <div>
-                    <input type="text" placeholder="Enter Your Coupon">
-                    <button class="normal">Apply</button>
+                <form action="check.php" method="post">
+                    <input type="text" name ="coupon" class="input">
+                    <input type="submit" name="check_coupon" value="Apply" class="option-btn">
+                </form>
+                </div>
+                <div class="halfpayhalforeder">
+                    <div class="payment-method">
+                        <h3>Payment Method</h3>
+                        <div class="form-group">
+					        <form>
+						        <label for="paymethod">Type:</label>
+						        <select id="paymethod" name="paymethod">
+							        <option value="PAY1">CARD</option>
+							        <option value="PAY2">CASH</option>
+						        </select>
+					        </form>
+				        </div>
+                    </div>
+                    <div class="order-type">
+                        <h3>Order Type</h3>
+                        <div class="form-group">
+					        <form>
+						        <label for="ordertype">Type:</label>
+						        <select id="ordertype" name="ordertype">
+							        <option value="ONLINE">ONLINE</option>
+							        <option value="ONSITE">ONSITE</option>
+						        </select>
+					        </form>
+				        </div>
+                    </div>
                 </div>
             </div>
-
-            <div id="subtotal">
-                <h3>Cart Totals</h3>
-                <table>
-                    <tr>
-                        <td>Cart Subtotal</td>
-                        <td>335 บาท</td>
-                    </tr>
-                    <tr>
-                        <td>Shipping</td>
-                        <td>Free</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>335 บาท</strong></td>
-                    </tr>
-                </table>
-                <button class="normal">Proceed to Checkout</button>
-            </div>
+        
         </section>
-
+    
         <script src="/beforelogin/script.js"></script>
         <script src="https://kit.fontawesome.com/10876e5229.js" crossorigin="anonymous"></script>
     </body>
