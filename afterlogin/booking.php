@@ -43,7 +43,7 @@ $row = mysqli_fetch_array($result);
                 <li><a class="active" href="table.php">TABLE</a></li>
                 <!-- <li><a href="blog.php">BLOG</a></li> -->
                 <li><a href="/beforelogin/home.php">LOGOUT</a></li>
-                <li><a href="accountsetting2.php">ACCOUNT SETTING</a></li>
+                <li><a href="accountsetting2.php?edit=<?php echo $_SESSION['user_login']; ?>">ACCOUNT SETTING</a></li>
                 <li id="lg-bag"><a href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
             </ul>
