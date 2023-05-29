@@ -92,7 +92,7 @@ if (isset( $_SESSION['minimum'] )  ) {
                 <li><a href="table.php">TABLE</a></li>
                 <li><a href="index.php">LOGOUT</a></li>
                 <!-- <li><a href="blog.php">BLOG</a></li> -->
-                <li><a href="accountsetting.php">ACCOUNT SETTING</a></li>
+                <li><a href="accountsetting2.php">ACCOUNT SETTING</a></li>
                 <li id="lg-bag"><a class="active" href="afcart.php"><i class='bx bx-shopping-bag'></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
             </ul>

@@ -28,7 +28,7 @@ if(isset($_POST['confirm_payment'])) {
                     mysqli_query($condb, $update);
                     header('location:afterlogin.php');
                 }else{
-                    $_SESSION['error']="กรุณากรอก address <a href='accountsetting.php' class='alert-link'>accountsetting</a>";
+                    $_SESSION['error']="กรุณากรอก address <a href='accountsetting2.php' class='alert-link'>accountsetting</a>";
                     header('location:afcart.php');
                 }
             }else{
@@ -39,7 +39,7 @@ if(isset($_POST['confirm_payment'])) {
                 header('location:afterlogin.php');
             }
         }else {
-            $_SESSION['error']="กรุณากรอก card number <a href='accountsetting.php' class='alert-link'>accountsetting</a>";
+            $_SESSION['error']="กรุณากรอก card number <a href='accountsetting2.php' class='alert-link'>accountsetting</a>";
             header('location:afcart.php');
         }
 //วิธีการจ่ายตังแบบเงินสด
@@ -54,7 +54,7 @@ if(isset($_POST['confirm_payment'])) {
                 mysqli_query($condb, $update);
                 header('location:afterlogin.php');
             }else{
-                $_SESSION['error']="กรุณากรอก address <a href='accountsetting.php' class='alert-link'>accountsetting</a>";
+                $_SESSION['error']="กรุณากรอก address <a href='accountsetting2.php' class='alert-link'>accountsetting</a>";
                 header('location:afcart.php');
             }
         }else{
