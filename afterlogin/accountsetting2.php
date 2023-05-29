@@ -8,7 +8,7 @@
         echo 'ไม่มีข้อมูล';
     }
 
-    $id = $_GET['edit'];
+    $id = @$_GET['edit'];
 
     if(isset($_POST['update_user'])) {
 
@@ -240,7 +240,15 @@
 
     <?php
 
-        $select = mysqli_query($condb, "SELECT * FROM user WHERE user_id = $id");
+        $select = mysqli_query($condb, "SELECT * FROM user WHERE user_id = $id ");
+        // $stmt = mysqli_prepare($condb, "SELECT * FROM user WHERE user_id = $id ");
+        // mysqli_stmt_bind_param($stmt, "i", $id);
+
+        //     // Execute the statement
+        //     mysqli_stmt_execute($stmt);
+
+        //     // Get the results
+        //     $result = mysqli_stmt_get_result($stmt);
 
         while($row = mysqli_fetch_assoc($select)){
 
@@ -355,7 +363,7 @@
                                 </div>
                                 <div>
                                     <a href="user.php"><button type="submit" class="btn btn-primary w-25" name="update_user">Update</button></a>
-                                    <a href="user.php"><button type="button" class="btn btn-light w-25" name="cancel">Cancel</button></a>
+                                    <a href="afterlogin.php"><button type="button" class="btn btn-light w-25" name="cancel">Cancel</button></a>
                                 </div>
                             </div>
 
