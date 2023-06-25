@@ -60,6 +60,7 @@ if (isset( $_SESSION['minimum'] )  ) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/database_project/beforelogin/style.css">
     <link rel="stylesheet" href="afcart_afshop.css">
@@ -189,7 +190,7 @@ if (isset( $_SESSION['minimum'] )  ) {
                 </form>
             </div>
         <form action="confirm_payment.php" method="post">
-        <input type="submit" name="confirm_payment" value="Confirm" class="btn">
+        
             <div class="halfpayhalforeder">
                 <div class="payment-method">
                     <h3>Payment Method</h3>
@@ -216,7 +217,11 @@ if (isset( $_SESSION['minimum'] )  ) {
                     </div>
                 </div>
             </div>
+            <br/>
+            <input type="submit" name="confirm_payment" value="Order Confirm" class="btn" onclick="return confirm('Would you like to confirm your order?');">
             
+           
+        </form>
         </div>
 
     </section>

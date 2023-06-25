@@ -26,9 +26,11 @@ if(isset($_POST['confirm_payment'])) {
                     $update = "INSERT INTO billing( user_id , total_price, order_type_id, payment_id) 
                     VALUES ('$user_id','$total','$order_type','$payment')";
                     mysqli_query($condb, $update);
+                    $reset = "DELETE FROM cart WHERE user_id=$user_id";
+                    mysqli_query($condb, $reset);
                     header('location:afterlogin.php');
                 }else{
-                    $_SESSION['error']="กรุณากรอก address <a href='accountsetting2.php' class='alert-link'>accountsetting</a>";
+                    $_SESSION['error']="กรุณากรอก address <a href='accountsetting2.php?edit=$user_id' class='alert-link'>accountsetting</a>";
                     header('location:afcart.php');
                 }
             }else{
@@ -36,10 +38,12 @@ if(isset($_POST['confirm_payment'])) {
                 // $update = "UPDATE billing SET user_id='$user_id' , total_price='$total', order_type_id='$order_type', payment_id='$payment'";
                 $update = "INSERT INTO billing( user_id , total_price, order_type_id, payment_id)  VALUES ('$user_id','$total','$order_type','$payment')";
                 mysqli_query($condb, $update);
+                $reset = "DELETE FROM cart WHERE user_id=$user_id";
+                mysqli_query($condb, $reset);
                 header('location:afterlogin.php');
             }
         }else {
-            $_SESSION['error']="กรุณากรอก card number <a href='accountsetting2.php' class='alert-link'>accountsetting</a>";
+            $_SESSION['error']="กรุณากรอก ข้อมูล Card <a href='accountsetting2.php?edit=$user_id' class='alert-link'>accountsetting</a>";
             header('location:afcart.php');
         }
 //วิธีการจ่ายตังแบบเงินสด
@@ -52,9 +56,11 @@ if(isset($_POST['confirm_payment'])) {
                 // $update = "UPDATE billing SET user_id='$user_id' , total_price='$total', order_type_id='$order_type', payment_id='$payment'";
                 $update = "INSERT INTO billing( user_id , total_price, order_type_id, payment_id)  VALUES ('$user_id','$total','$order_type','$payment')";
                 mysqli_query($condb, $update);
+                $reset = "DELETE FROM cart WHERE user_id=$user_id";
+                mysqli_query($condb, $reset);
                 header('location:afterlogin.php');
             }else{
-                $_SESSION['error']="กรุณากรอก address <a href='accountsetting2.php' class='alert-link'>accountsetting</a>";
+                $_SESSION['error']="กรุณากรอก address <a href='accountsetting2.php?edit=$user_id' class='alert-link'>accountsetting</a>";
                 header('location:afcart.php');
             }
         }else{
@@ -63,6 +69,8 @@ if(isset($_POST['confirm_payment'])) {
             $update = "INSERT INTO billing( user_id , total_price, order_type_id, payment_id)  VALUES ('$user_id','$total','$order_type','$payment')";
             // $update = "INSERT INTO billing( user_id , total_price)  VALUES ('$user_id','$total')";
             mysqli_query($condb, $update);
+            $reset = "DELETE FROM cart WHERE user_id=$user_id";
+            mysqli_query($condb, $reset);
             header('location:afterlogin.php');
         }
     }

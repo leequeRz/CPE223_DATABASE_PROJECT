@@ -158,7 +158,7 @@
         $card_number = $_POST['card_number'];
         $cvv = $_POST['cvv'];
         $exp = $_POST['expire_month'];
-        $card_type_id = isset($_POST['card_type_id']);
+        // $card_type_id = isset($_POST['card_type_id']);
         // if (isset($_POST['card_type_id'])) {
         //     $cardTypeId = $_POST['card_type_id'];
         //     // Rest of your code that uses the $cardTypeId variable
@@ -169,24 +169,23 @@
 
         if(($card_number !="") && ($cvv !="")&& ($exp !="")){
             
-            $query = "SELECT * FROM user u, payment_card pc WHERE u.user_id = $id AND u.card_number = pc.card_number";
+            $query = "SELECT * FROM user WHERE user_id = $id ";
             $select = mysqli_query($condb, $query);
             $row = mysqli_fetch_assoc($select);
-            
+            $old_card_number=$row['card_number'];
             // echo $row;
-            if($row > 0){
-                
-                    $update = "UPDATE payment_card SET card_number='$card_number', cvv='$cvv', expire_month='$exp', card_type_id='$card_type_id' WHERE user_id = $id";
+            if($row['card_number']!=NULL){
+                    $update = "UPDATE payment_card SET card_number='$card_number', cvv='$cvv', expire_month='$exp' WHERE card_number = '$old_card_number'";
                     mysqli_query($condb, $update);
-                    $_SESSION['success'] ='อัพเดท card สำเร็จ';
+                    $_SESSION['success'] ='อัพเดท card สำเร็จ2';
                     header("Loacation: accountsetting2.php");
                 
             }else{
-                $insert = "INSERT INTO payment_card(card_number, cvv, expire_month, card_type_id) VALUES ('$card_number','$cvv','$exp','$card_type_id') ";
-
-                $result = mysqli_query($condb, $insert);
-
-                $_SESSION['success'] = "เพิ่ม card สำเร็จ";
+                $insert = "INSERT INTO payment_card(card_number, cvv, expire_month) VALUES ('$card_number','$cvv','$exp') ";
+                mysqli_query($condb, $insert);
+                $update_user = "UPDATE user SET card_number='$card_number' WHERE user_id = $id ";
+                mysqli_query($condb, $update_user);
+                $_SESSION['success'] = "เพิ่ม card 1";
                 header("Loacation: accountsetting2.php");
             }
         }else {
